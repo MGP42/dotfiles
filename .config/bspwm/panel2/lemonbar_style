@@ -1,0 +1,60 @@
+xset fp+ ~/.fonts/misc
+xset fp+ ~/.fonts/ohsnap
+xset fp+ ~/.fonts/terminesspowerline
+
+panel_fifo=lb_fifo.tmp
+
+##### Fonts
+font_symbol="-xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859-1"
+font_basic="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1"
+
+
+#font_basic=Ubuntu
+
+##### Setup
+geometry=x16                    #default "x14" / change at own risk
+
+#### Colors
+
+color_main1_fg=1B1E1F		#Green
+color_main1_bg=B5BD68
+color_main2_fg=000000		#Darker Green
+color_main2_bg=8F8D38
+
+color_info1_fg=C5BEC6		#Dark Grey
+color_info1_bg=282A2E
+color_info2_fg=C5BEC6		#Grey
+color_info2_bg=555555
+
+color_tray_fg=ffffff		#Black
+color_tray_bg=000000
+
+
+
+
+
+
+
+
+
+
+
+
+##### Symbols
+
+# Char glyps for powerline fonts
+sep_left=""                        # Powerline separator left
+sep_right=""                       # Powerline separator right
+sep_l_left=""                      # Powerline light separator left
+sep_l_right=""                     # Powerline light sepatator right
+
+# Icons-
+icon_home=" É" #   #"\uf015"
+icon_cpu="Ï"
+icon_memory="Þ"
+icon_clock="Õ"
+icon_down="Ð"
+icon_up="Ñ"
+icon_power=n
+icon_volume="Ô"
+

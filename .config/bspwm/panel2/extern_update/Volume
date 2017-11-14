@@ -1,0 +1,4 @@
+. "$(dirname $0)/../lemonbar_style"
+panel_fifo=$(dirname $0)/../$panel_fifo
+echo  "volume\ $(amixer get Master | grep "${snd_cha}" | awk -F'[]%[]' '/%/ {if ($7 == "off") {print "×"} else {printf "%d%", $2}}')">> ${panel_fifo}
+
