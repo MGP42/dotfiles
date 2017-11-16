@@ -1,7 +1,7 @@
 conky.config={
 	background = false,
 	update_interval = 1,
-	total_run_times = 2,
+	total_run_times = 0,
 	override_utf8_locale = true,
 	short_units = true,
 	uppercase = false,
@@ -15,16 +15,12 @@ conky.config={
 conky.text = [[
 	# Network
 	${if_match "${addr enp1s0}" != "No Address"}network\ ${downspeedf enp1s0} + ${upspeedf enp1s0}
-	${else}${if_match "${addr wlp2s0}" != "No Address"}network\ ${downspeedf wlp2s0} + ${upspeedf wlp2s0}
-	abx
+	${else}${if_match "${addr wlp2s0}" != "No Address"}network\ ${downspeedf wlp2s0}+${upspeedf wlp2s0}
         ${else}network\ x + x${endif}${endif}
 	####################################
-	cpu\${cpu cpu0} 
+	cpu\${cpu cpu0}
 	memory\ ${mem}
 	# ${fs_used_perc /}
 	# ${fs_used_perc /data}
 	#
-	#
-	#
-	start
 ]]

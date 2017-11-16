@@ -3,15 +3,15 @@ XF86MonBrightnessDown
 
 XF86AudioRaiseVolume
 	amixer sset Master 1+ unmute; \
-	echo "extern\ Volume" >> ~/.config/bspwm/panel2/lb_fifo.tmp	
+	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp	
 
 XF86AudioLowerVolume
 	amixer sset Master 1- unmute; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 XF86AudioMute
 	amixer sset Master {mute,unmute}; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 
 #
@@ -73,7 +73,7 @@ super + ctrl + {x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}; \
-	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -82,7 +82,7 @@ super + {p,b,comma,period}
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -91,7 +91,7 @@ super + bracket{left,right}
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -102,7 +102,7 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 #
 # preselect
@@ -143,3 +143,17 @@ super + {Left,Down,Up,Right}
 # lock
 ctrl + alt + l
 	i3lock -i /data/Bilder/.tmp/lock_bg.png
+
+#
+# Programms
+#
+
+# Keepass
+
+ctrl + alt + k
+	keepass
+
+super + e
+	DESKTOP_SESSION=kde dolphin
+
+#

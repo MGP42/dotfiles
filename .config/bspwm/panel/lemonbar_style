@@ -2,10 +2,6 @@ xset fp+ ~/.fonts/misc
 xset fp+ ~/.fonts/ohsnap
 xset fp+ ~/.fonts/terminesspowerline
 
-
-
-
-
 panel_fifo=lb_fifo.tmp
 
 ##### Fonts
@@ -16,44 +12,29 @@ font_basic="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646
 #font_basic=Ubuntu
 
 ##### Setup
-geometry=x16			#default "x14" / change at own risk
+geometry=x16                    #default "x14" / change at own risk
 
 #### Colors
 
-color_1_bg=B5BD68		#green
-color_1_fg=1b1e1f
-color_2_bg=282a2e		#grey dark
-color_2_fg=c5bec6
-color_3_bg=555555		#grey
-color_3_fg=c5bec6
-color_4_bg=858D38
-color_4_fg=000000
+color_main1_fg=1B1E1F		#Green
+color_main1_bg=B5BD68
+color_main2_fg=000000		#Darker Green
+color_main2_bg=8F8D38
 
-# specify
+color_info1_fg=C5BEC6		#Dark Grey
+color_info1_bg=282A2E
+color_info2_fg=C5BEC6		#Grey
+color_info2_bg=555555
 
-c_clock_bg=$color_1_bg
-c_clock_fg=$color_1_fg
-c_battery_bg=$color_2_bg
-c_battery_fg=$color_2_fg
-c_home_bg=$color_1_bg
-c_home_fg=$color_1_fg
-c_desktop_bg=$color_4_bg
-c_desktop_fg=$color_4_fg
-c_desktop2_bg=$color_1_bg
-c_desktop2_fg=$color_1_fg
-c_task_bg=000000
-c_task_fg=ffffff
-c_date_bg=$color_2_bg
-c_date_fg=$color_2_fg
-c_cpu_bg=$color_3_bg
-c_cpu_fg=$color_3_fg
-c_memory_bg=$color_3_bg
-c_memory_fg=$color_3_fg
-c_network_bg=$color_2_bg
-c_network_fg=$color_2_fg
-c_volume_bg=$color_3_bg
-c_volume_fg=$color_3_fg
+color_tray_fg=ffffff		#Black
+color_tray_bg=000000
 
+
+
+
+
+
+##### Symbols
 
 # Char glyps for powerline fonts
 sep_left=""                        # Powerline separator left
@@ -65,8 +46,9 @@ sep_l_right=""                     # Powerline light sepatator right
 icon_home=" É" #   #"\uf015"
 icon_cpu="Ï"
 icon_memory="Þ"
-icon_clock="Õ" 
-icon_down="Ð"                         
+icon_clock="Õ"
+icon_down="Ð"
 icon_up="Ñ"
 icon_power=n
 icon_volume="Ô"
+
