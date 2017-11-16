@@ -1,5 +1,5 @@
 XF86MonBrightnessDown
-\	killall stalonetray
+	killall stalonetray
 
 XF86AudioRaiseVolume
 	amixer sset Master 1+ unmute; \
@@ -82,7 +82,7 @@ super + {p,b,comma,period}
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel2/lb_fifo.tmp
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -91,7 +91,7 @@ super + bracket{left,right}
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel2/lb_fifo.tmp
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -101,8 +101,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel2/lb_fifo.tmp
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
 # preselect
