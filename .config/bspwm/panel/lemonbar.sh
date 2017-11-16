@@ -15,7 +15,7 @@ mkfifo "${panel_fifo}"
 
 
 ##################################################################################################
-# Tools ##########################################################################################
+# Modules ########################################################################################
 ##################################################################################################
 
 
@@ -62,7 +62,7 @@ Conky(){
 
 Window(){
 	while true;do
-		echo  "windowname\ %{A4:i3lock:}$(xdotool getwindowfocus getwindowname)%{A4}" >> ${panel_fifo}
+		echo  "windowname\ $(xdotool getwindowfocus getwindowname)" >> ${panel_fifo}
 		sleep 1
 	done
 }
@@ -70,53 +70,59 @@ Window(){
 ##################################################################################################
 # One Time Execute with extern update ############################################################
 #################################################################################################
+# You could implement this as an time based update (like above)
+# Problem is you usualy want to set the time for them as close to zero as possible
+# Don't do it, it's unperformant as hell (trust me i tried it)
+# Actually some of the above also shouldn't be time based
+#
+# Do not care Won't Fix (atleast for now)
+
 
 Volume(){
 	echo  "volume\ $(amixer get Master | grep "${snd_cha}" | awk -F'[]%[]' '/%/ {if ($7 == "off") {print "×"} else {printf "%d%", $2}}')">> ${panel_fifo}
 }
 
 Desktop(){
-	color_old=$color_tray_bg
-	first=1
-	atm=null
-	tmp=$(echo "$(Spacer_right $color_main2_bg $color_main2_fg $color_old) ")
+	color_old=$color_tray_bg													# Background Color before the Desktop Module starts
+	atm=null															# Marker if the active Desktop is beeing processed (boolean, more or less)
+	tmp=$(echo "$(Spacer_right $color_main2_bg $color_main2_fg $color_old) ")							# Default Spacer (Current Desktop not first)
 
 	for i in $(bspc query -D); do
-		if [ "$(bspc query -d -D)" == "$i" ]
+		if [ "$(bspc query -d -D)" == "$i" ]											# If Desktop is Active
                 then
 			if [ $atm == "0" ]
 			then
-				tmp=$(echo "${tmp::-1} $(Spacer_right $color_main1_bg $color_main1_fg $color_main2_bg)")	
+				tmp=$(echo "${tmp::-1} $(Spacer_right $color_main1_bg $color_main1_fg $color_main2_bg)")		# Add Active Desktop Spacer to Output with main 1 Color and remove inactive Spacer
 			else
-				tmp=$(echo "$(Spacer_right $color_main1_bg $color_main1_fg $color_old) ")
+				tmp=$(echo "$(Spacer_right $color_main1_bg $color_main1_fg $color_old) ")				# Active Desktop is the first Desktop, throw Default Spacer in the Garbage and use it's own
 			fi
-				tmp=$(echo "$tmp $(bspc query -T -d $i | cut -d'"' -f4) ")
-			atm=1
+				tmp=$(echo "$tmp $(bspc query -T -d $i | cut -d'"' -f4) ")						# Actual Desktop Name
+			atm=1														# set processed Desktop to active
 		else
-			if [ "$(bspc query -N -n .window -d $i)" != "" ]
+			if [ "$(bspc query -N -n .window -d $i)" != "" ]								# If inactive Desktop has no Windows do no output
 			then
-				if [ $atm == "1" ]
+				if [ $atm == "1" ]											# If last Desktop was the active one set special Spacer
 				then
 					tmp=$(echo "$tmp $(Spacer_right $color_main2_bg $color_main2_fg $color_main1_bg)")
 				fi
-				tmp=$(echo " $tmp $(bspc query -T -d $i | cut -d'"' -f4) $sep_l_right")
-				atm=0
+				tmp=$(echo " $tmp $(bspc query -T -d $i | cut -d'"' -f4) $sep_l_right")					# Desktop Name + Spacer for next Desktop (inactive)
+				atm=0													# set processed Desktop to inactive
 			fi
 		fi
 	done
 	
-	if [ $atm == "1" ]
+	if [ $atm == "1" ]														# Set final Spacer dependent on: was last Desktop active?
 	then
-		tmp=$(echo "$tmp $(Spacer_right $color_tray_bg $color_tray_fg $color_main1_bg)")
+		tmp=$(echo "$tmp $(Spacer_right $color_wn_bg $color_wn_fg $color_main1_bg)")
 	else
-		tmp=$(echo "${tmp::-1} $(Spacer_right $color_tray_bg $color_tray_fg $color_main2_bg)")
+		tmp=$(echo "${tmp::-1} $(Spacer_right $color_wn_bg $color_wn_fg $color_main2_bg)")
 	fi
-	Fast_Window &
-	echo "desktop\ $tmp" >> ${panel_fifo}
+	Fast_Window &															# reload Windowname
+	echo "desktop\ $tmp" >> ${panel_fifo}												# send it to parer
 }
 
-Fast_Window(){
-	echo  "windowname\ %{A4:i3lock:}$(xdotool getwindowfocus getwindowname)%{A4}" >> ${panel_fifo}
+Fast_Window(){																# Windowname extern updater
+	echo  "windowname\ $(xdotool getwindowfocus getwindowname)" >> ${panel_fifo}
 }
 
 ##################################################################################################
@@ -170,7 +176,7 @@ Spacer_left(){					#Spacer to the left <bgcolor|fgcolor>
 }
 
 Spacer_right(){					#Spacer to the right <bgcolor|fgcolor|old bgcolor>
-        color_old=$3	#$color_bg	#Bug c_old
+        color_old=$3				#$color_bg	#Bug c_old
         color_bg=$1
         color_fg=$2
         echo "%{F#$color_old}%{B#$color_bg}$sep_right%{F#$color_fg}"
@@ -192,29 +198,28 @@ Desktop &
 
 lemonbar_output(){
 	while true; do
+		echo "%{F#$color_wn_fg}%{B#$color_wn_bg}"                       #Anti fuck up / do not touch    # Srsly it does exactly what it's suposed to do, do not change it,
+                echo -n "%{F#$color_tray_fg}%{B#$color_tray_bg}"                #Anti fuck up / do not touch    # or live with the consequences (weird first color Bullshit Bingo)
+
 		lemonbar_parser
+
 		# left
-		echo -n "       "
-		echo -n "$desktop"
-		echo -n "$windowname"
-		#echo -n " $(Spacer_right $color_main1_bg $color_main1_fg $color_tray_bg) "
-		#echo -n " $(Spacer_right $color_tray_bg $color_tray_fg $color_main1_bg) $windowname "
+		echo -n  "       "									#Space for Tray
+		echo -n "$desktop"									#Desktop (has all the Spacers itsleft)
+		echo -n "$windowname"									#windowname
 		# right
 		echo -n %{r}
-
-		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg) $network"
-		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $cpu$sep_l_left $memory"
-		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg)$battery"	#Batetry+Spacer
-		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $volume"	#Volume +Spacer
-		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg)$date"		#Date	+Spacer
-		echo -n " $(Spacer_left $color_main1_bg $color_main1_fg)$clock"		#Clock	+Spacer
-
-		echo %{F#$color_tray_fg}%{B#$color_tray_bg}		#Anti fuck up / do not touch
+		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg) $network"			#Network	+Spacer
+		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $cpu$sep_l_left $memory"	#CPU		+Spacer
+		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg)$battery"			#Batetry	+Spacer
+		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $volume"			#Volume 	+Spacer
+		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg)$date"				#Date		+Spacer
+		echo -n " $(Spacer_left $color_main1_bg $color_main1_fg)$clock"				#Clock		+Spacer
 	done	
 }
 
 
-lemonbar_output | lemonbar -p -g $geometry  -B "#000000" -F "#ffffff"    -f $font_symbol  -f $font_basic | /bin/bash
+lemonbar_output | lemonbar -p -g $geometry  -B "#$color_wn_bg" -F "#$color_wn_fg"    -f $font_symbol  -f $font_basic | /bin/bash	#The Actual Bar
 
 
 

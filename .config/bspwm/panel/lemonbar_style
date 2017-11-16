@@ -1,3 +1,4 @@
+##### xset font Stuff
 xset fp+ ~/.fonts/misc
 xset fp+ ~/.fonts/ohsnap
 xset fp+ ~/.fonts/terminesspowerline
@@ -9,23 +10,28 @@ font_symbol="-xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859
 font_basic="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1"
 
 
-#font_basic=Ubuntu
-
 ##### Setup
 geometry=x16                    #default "x14" / change at own risk
 
 #### Colors
 
+# Main (Clock / Desktops)					# i actually should split that, but idc atm
 color_main1_fg=1B1E1F		#Green
 color_main1_bg=B5BD68
 color_main2_fg=000000		#Darker Green
 color_main2_bg=8F8D38
 
+# System Info
 color_info1_fg=C5BEC6		#Dark Grey
 color_info1_bg=282A2E
 color_info2_fg=C5BEC6		#Grey
 color_info2_bg=555555
 
+# Windowname
+color_wn_fg=ffffff		#Black
+color_wn_bg=000000
+
+# Tray
 color_tray_fg=ffffff		#Black
 color_tray_bg=000000
 
@@ -43,12 +49,12 @@ sep_l_left=""                      # Powerline light separator left
 sep_l_right=""                     # Powerline light sepatator right
 
 # Icons-
-icon_home=" É" #   #"\uf015"
-icon_cpu="Ï"
-icon_memory="Þ"
-icon_clock="Õ"
-icon_down="Ð"
-icon_up="Ñ"
-icon_power=n
-icon_volume="Ô"
+icon_home=" É"		# Home (unused)
+icon_cpu="Ï"		# CPU
+icon_memory="Þ"		# Memory
+icon_clock="Õ"		# Clock
+icon_down="Ð"		# Arrow down
+icon_up="Ñ"		# Arrow up
+icon_power=n		# Power 	# Ähm äh it actualy does not exist yet and is just a spacer, feel free to implement
+icon_volume="Ô"		# Volume
 
