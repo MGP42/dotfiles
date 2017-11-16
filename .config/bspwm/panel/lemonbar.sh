@@ -129,13 +129,23 @@ lemonbar_parser(){				#Parses FiFo to Variables
                 value=$(echo $line | cut -d\\ -f2)
                 case $index in
                         (clock) clock=$value;;
-			(memory) memory="$icon_memory$value";;
+			(memory)
+				memory="%{A:bash $(dirname $0)/dropdown/dropdown.sh memory:}"
+				memory+="$icon_memory$value"
+				memory+=" %{A}"
+				;;
 			(network) 
-				network="$icon_up $(echo $value | cut -d+ -f1)"
+				network="%{A:bash $(dirname $0)/dropdown/dropdown.sh network:}"
+				network+="$icon_up $(echo $value | cut -d+ -f1)"
                                 network+=" $sep_l_left "
                                 network+="$icon_down $(echo $value | cut -d+ -f2)"
+				network+=" %{A}"
 				;;
-			(cpu) cpu="$icon_cpu $((value/4))%";;
+			(cpu) 
+				cpu="%{A:bash $(dirname $0)/dropdown/dropdown.sh cpu:}"
+				cpu+="$icon_cpu $((value/4))%"
+				cpu+=" %{A}"
+				;;
                         (date) date=$value;;
                         (battery) battery=$value;;
                         (desktop) desktop=$value;;
@@ -192,9 +202,9 @@ lemonbar_output(){
 		# right
 		echo -n %{r}
 
-		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg) $network"
-		echo -n " $(Spacer_left $color_info2_bg $color_info2_fg) $cpu $sep_l_left $memory"
-		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg)$battery"	#Batetry+Spacer
+		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg) $network"
+		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $cpu$sep_l_left $memory"
+		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg)$battery"	#Batetry+Spacer
 		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $volume"	#Volume +Spacer
 		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg)$date"		#Date	+Spacer
 		echo -n " $(Spacer_left $color_main1_bg $color_main1_fg)$clock"		#Clock	+Spacer

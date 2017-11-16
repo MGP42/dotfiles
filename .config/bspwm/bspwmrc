@@ -29,7 +29,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-~/.config/bspwm/panel/lemonbar.sh &
+bash ~/.config/bspwm/panel/lemonbar.sh &
 feh --bg-fill /data/Bilder/Wallpaper/Fractal/synergy_by_zy0rg-d2ypdzp.png &
 
 sleep 1
@@ -52,6 +52,8 @@ compton
 
 killall telegram-desktop
 killall dropbox
+killall lemonbar
+killall bash
 killall lemonbar.sh
 killall nm-applet
 killall stalonetray
