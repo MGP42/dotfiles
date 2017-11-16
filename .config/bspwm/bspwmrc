@@ -5,14 +5,12 @@ xsetroot -cursor_name left_ptr							#Mouse
 
 ####### KEYRING
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)	#Keyring itself
-export SSH_AUTH_SOCK								#Can't remember is important, has to do with the Keyring
-
-###### AUTOSTART
-nm-applet &
-sxhkd &
-dropbox &
-kdeconnect-indicator &
-##################
+export SSH_AUTH_SOCK	
+							#Can't remember is important, has to do with the Keyring
+####### Autostart PRE
+# Stuff that can't be loaded late out of whatever reason DO NOT LIKE
+nm-applet &		# Applet's broken as fuck anyway. fix it FFS
+#######
 
 ####### BSPCWM implementation
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -35,14 +33,15 @@ bspc rule -a Screenkey manage=off
 bash ~/.config/bspwm/panel/lemonbar.sh &
 feh --bg-fill /data/Bilder/Wallpaper/Fractal/synergy_by_zy0rg-d2ypdzp.png &
 
-sleep 1		#delay of stalonetray without it will hide behind the lemonbar
-stalonetray -i 16 --max-geometry 4x1 --scrollbars horizontal  -d "all" -t "true"  --scrollbars-step "16" &
 
 
-
-telegram-desktop &
-
-
+sleep 1				#in Case of Programs not loaded for satlonetray
+###### AUTOSTART
+sxhkd &
+dropbox &
+kdeconnect-indicator &
+telegram-desktop &		# this on especially
+##################
 
 
 

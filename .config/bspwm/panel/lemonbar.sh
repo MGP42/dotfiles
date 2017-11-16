@@ -149,7 +149,7 @@ lemonbar_parser(){				#Parses FiFo to Variables
 				;;
 			(cpu) 
 				cpu="%{A:bash $(dirname $0)/dropdown/dropdown.sh cpu:}"
-				cpu+="$icon_cpu $((value/4))%"
+				cpu+="$icon_cpu $value%"
 				cpu+=" %{A}"
 				;;
                         (date) date=$value;;
@@ -219,7 +219,8 @@ lemonbar_output(){
 }
 
 
-lemonbar_output | lemonbar -p -g $geometry  -B "#$color_wn_bg" -F "#$color_wn_fg"    -f $font_symbol  -f $font_basic | /bin/bash	#The Actual Bar
+sleep 0.2 && stalonetray -i 16 --max-geometry 4x1 --scrollbars horizontal  -d "all" -t "true"  --scrollbars-step "16" &			# Lemonbar with delay to set it infront of the lemonbar
+lemonbar_output | lemonbar -p -g $geometry  -B "#$color_wn_bg" -F "#$color_wn_fg"    -f $font_symbol  -f $font_basic | /bin/bash	# The Actual Bar
 
 
 
