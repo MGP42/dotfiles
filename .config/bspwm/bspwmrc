@@ -1,11 +1,11 @@
 #! /bin/sh
 
-setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		
+setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		#Keyboard to DE
 xsetroot -cursor_name left_ptr							#Mouse
 
 ####### KEYRING
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)	#Keyring itself
+export SSH_AUTH_SOCK								#Can't remember is important, has to do with the Keyring
 
 ###### AUTOSTART
 nm-applet &
@@ -14,6 +14,7 @@ dropbox &
 kdeconnect-indicator &
 ##################
 
+####### BSPCWM implementation
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
@@ -23,16 +24,18 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+
+##### System Stuff
 bash ~/.config/bspwm/panel/lemonbar.sh &
 feh --bg-fill /data/Bilder/Wallpaper/Fractal/synergy_by_zy0rg-d2ypdzp.png &
 
-sleep 1
+sleep 1		#delay of stalonetray without it will hide behind the lemonbar
 stalonetray -i 16 --max-geometry 4x1 --scrollbars horizontal  -d "all" -t "true"  --scrollbars-step "16" &
 
 
