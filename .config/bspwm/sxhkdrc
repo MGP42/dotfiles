@@ -3,15 +3,15 @@ XF86MonBrightnessDown
 
 XF86AudioRaiseVolume
 	amixer sset Master 1+ unmute; \
-	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp	
+	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 XF86AudioLowerVolume
 	amixer sset Master 1- unmute; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
+        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
 
 XF86AudioMute
 	amixer sset Master {mute,unmute}; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
+        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
 
 
 #

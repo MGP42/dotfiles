@@ -16,10 +16,14 @@ geometry=x16                    #default "x14" / change at own risk
 #### Colors
 
 # Main (Clock / Desktops)					# i actually should split that, but idc atm
-color_main1_fg=1B1E1F		#Green
-color_main1_bg=B5BD68
-color_main2_fg=000000		#Darker Green
-color_main2_bg=8F8D38
+#color_main1_fg=1B1E1F		#Green
+#color_main1_bg=B5BD68
+#color_main2_fg=000000		#Darker Green
+#color_main2_bg=8F8D38
+color_main1_fg=000000		#Blue
+color_main1_bg=55C2ED
+color_main2_fg=000000		#Darker Blue
+color_main2_bg=88157DAA #004A59
 
 # System Info
 color_info1_fg=C5BEC6		#Dark Grey
@@ -29,7 +33,7 @@ color_info2_bg=555555
 
 # Windowname
 color_wn_fg=ffffff		#Black
-color_wn_bg=000000
+color_wn_bg=88000000
 
 # Tray
 color_tray_fg=ffffff		#Black

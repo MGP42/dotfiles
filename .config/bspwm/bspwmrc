@@ -31,7 +31,7 @@ bspc rule -a Screenkey manage=off
 
 ##### System Stuff
 bash ~/.config/bspwm/panel/lemonbar.sh &
-feh --bg-fill /data/Bilder/Wallpaper/Fractal/synergy_by_zy0rg-d2ypdzp.png &
+feh --bg-fill /data/Bilder/.tmp/desktop_bg.png &
 
 
 
