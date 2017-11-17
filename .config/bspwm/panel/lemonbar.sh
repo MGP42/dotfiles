@@ -155,7 +155,11 @@ lemonbar_parser(){				#Parses FiFo to Variables
                         (date) date=$value;;
                         (battery) battery=$value;;
                         (desktop) desktop=$value;;
-                        (volume) volume=$icon_volume$value;;
+                        (volume) 
+				volume="%{A:bash $(dirname $0)/dropdown/bash termite_alsamixer:}"
+				volume+=$icon_volume$value
+				volume+=" %{A}"
+				;;
                         (conky) conky=$value;;
                         (windowname) windowname=$value;;
 			(extern) $($value);;
@@ -213,11 +217,10 @@ lemonbar_output(){
 		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $cpu$sep_l_left $memory"	#CPU		+Spacer
 		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg)$battery"			#Batetry	+Spacer
 		echo -n "$(Spacer_left $color_info2_bg $color_info2_fg) $volume"			#Volume 	+Spacer
-		echo -n " $(Spacer_left $color_info1_bg $color_info1_fg)$date"				#Date		+Spacer
+		echo -n "$(Spacer_left $color_info1_bg $color_info1_fg)$date"				#Date		+Spacer
 		echo -n " $(Spacer_left $color_main1_bg $color_main1_fg)$clock"				#Clock		+Spacer
 	done	
 }
-
 
 sleep 0.2 && stalonetray -i 16 --max-geometry 4x1 --scrollbars horizontal  -d "all" -t "true"  --scrollbars-step "16" &			# Lemonbar with delay to set it infront of the lemonbar
 lemonbar_output | lemonbar -p -g $geometry  -B "#$color_wn_bg" -F "#$color_wn_fg"    -f $font_symbol  -f $font_basic | /bin/bash	# The Actual Bar

@@ -1,8 +1,7 @@
-XF86MonBrightnessDown
-\	killall stalonetray
+XF86MonBrightnessDown \	killall stalonetray
 
 XF86AudioRaiseVolume
-	amixer sset Master 1+ unmute; \
+	amixer sset Master 1+ unmute; \ 
 	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 XF86AudioLowerVolume
@@ -11,6 +10,8 @@ XF86AudioLowerVolume
 
 XF86AudioMute
 	amixer sset Master {mute,unmute}; \
+	amixer sset Speaker unmute; \
+	amixer sset Headphone unmute; \
         echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
 
 
@@ -72,7 +73,7 @@ super + ctrl + {x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
-	bspc node -{f,s} {west,south,north,east}; \
+	bspc node -{f,s} {west,south,north,east}; \ 
 	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the node for the given path jump
@@ -81,7 +82,7 @@ super + {p,b,comma,period}
 
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local; \
+	bspc node -f {next,prev}.local; \ 
 	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the next/previous desktop in the current monitor
@@ -90,18 +91,17 @@ super + bracket{left,right}
 
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last; \
+	bspc {node,desktop} -f last; \ 
 	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 # focus the older or newer node in the focus history
 super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+	bspc wm -h off; \ 
+	bspc node {older,newer} -f; \ bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'; \
+	bspc {desktop -f,node -d} '^{1-9,10}'; \ 
 	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
 
 #
@@ -129,11 +129,11 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {k,l,o,odiaeresis}
+super + alt + {j,k,i,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {j,k,i,l}
+super + alt + ctrl + {j,k,i,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window

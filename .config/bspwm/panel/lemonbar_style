@@ -3,7 +3,7 @@ xset fp+ ~/.fonts/misc
 xset fp+ ~/.fonts/ohsnap
 xset fp+ ~/.fonts/terminesspowerline
 
-panel_fifo=lb_fifo.tmp
+panel_fifo=lb_fifo.tmp		#do not change (partially still hardcoded)
 
 ##### Fonts
 font_symbol="-xos4-terminusicons2mono-medium-r-normal--12-120-72-72-m-60-iso8859-1"
