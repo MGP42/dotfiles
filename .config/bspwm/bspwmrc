@@ -28,6 +28,10 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+##### Mouse / Touchpad
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1	#enable Tapping
+
+
 
 ##### System Stuff
 bash ~/.config/bspwm/panel/lemonbar.sh &

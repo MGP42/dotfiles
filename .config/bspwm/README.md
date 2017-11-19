@@ -11,5 +11,5 @@
 	* BSPWM
 	* alsa-utils
 	* stalonetray
-
+	* sxhkdrc
 

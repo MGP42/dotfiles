@@ -12,6 +12,7 @@ font_basic="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646
 
 ##### Setup
 geometry=x16                    #default "x14" / change at own risk
+warning_battery=20
 
 #### Colors
 

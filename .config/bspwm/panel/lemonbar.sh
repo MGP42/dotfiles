@@ -62,7 +62,7 @@ Conky(){
 
 Window(){
 	while true;do
-		echo  "windowname\ $(xdotool getwindowfocus getwindowname)" >> ${panel_fifo}
+		Fast_Window &
 		sleep 1
 	done
 }
