@@ -48,8 +48,9 @@ Date(){
 
 Battery(){
         while true; do
-        echo "battery\ %{A:bash $(dirname $0)/dropdown/dropdown.sh battery:} $(acpi --battery | cut -d, -f2) %{A}" >> ${panel_fifo}
-        sleep 1
+	tmp=$(acpi --battery | cut -d, -f2)
+        echo "battery\ %{A:bash $(dirname $0)/dropdown/dropdown.sh battery:} $tmp %{A}" >> ${panel_fifo}
+        sleep 10
         done
 }
 
