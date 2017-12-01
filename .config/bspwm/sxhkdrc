@@ -41,7 +41,9 @@ super + alt + Escape
 
 # close and kill
 super + {_,shift + }w
-	bspc node -{c,k}
+	bspc node -{c,k}; \
+        echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+
 
 # alternate between the tiled and monocle layout
 super + m
@@ -142,7 +144,7 @@ super + {Left,Down,Up,Right}
 
 # lock
 ctrl + alt + l
-	i3lock -i /data/Bilder/.tmp/lock_bg.png
+	i3lock -i ~/Bilder/.tmp/lock_bg.png
 
 #
 # Programms
@@ -156,4 +158,7 @@ ctrl + alt + k
 super + e
 	DESKTOP_SESSION=kde dolphin
 
-#
+ctrl + alt + n
+	networkmanager_dmenu
+
+
