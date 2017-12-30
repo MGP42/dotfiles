@@ -1,32 +1,76 @@
-constps1=""
-userps1="\u"
-coloruser="\[\e[44;37m\]"
-colorpath="\[\e[46;34m\]\[\e[46;34m\]"
-colordefault="\[\e[0m\]"
-colorend="\[\e[0;36m\]"
 
-colorsshuser="\[\e[0;34m\]"
+case "$TERM" in
+	xterm*)
 
-
-if [ $(id -u) -eq 0 ]; then
-        coloruser="\[\e[41;37m\]"
-        colorpath="\[\e[46;31m\]\[\e[46;34m\]"
-	colorsshuser="\[\e[0;31m\]"
-fi
+		constps1=""
+		userps1="\u"
+		coloruser="\[\e[44;37m\]"
+		colorpath="\[\e[46;34m\]\[\e[46;34m\]"
+		colordefault="\[\e[0m\]"
+		colorend="\[\e[0;36m\]"
 
 
 
+		colorsshuser="\[\e[0;34m\]"
 
-if [ -n "$SSH_CLIENT" ]; then
-	colorpath="\[\e[46;33m\]\[\e[46;34m\]"
-	userps1=$userps1$colorsshuser" @ \[\e[0;33m\]\[\e[43;30m\]\h"
-fi
-#colorprompt1=$coloruser
+
+		if [ $(id -u) -eq 0 ]; then
+		        coloruser="\[\e[41;37m\]"
+		        colorpath="\[\e[46;31m\]\[\e[46;34m\]"
+			colorsshuser="\[\e[0;31m\]"
+		fi
 
 
 
 
-PS1=$coloruser$userps1$colorpath" \W"$colorend""$colordefault" "
+		if [ -n "$SSH_CLIENT" ]; then
+			colorpath="\[\e[46;33m\]\[\e[46;34m\]"
+			userps1=$userps1$colorsshuser" @ \[\e[0;33m\]\[\e[43;30m\]\h"
+		fi
+		#colorprompt1=$coloruser
+
+
+
+		PS1=$coloruser$userps1$colorpath" \W"$colorend""$colordefault" "
+	;;
+	*)
+		constps1=""
+		userps1="\u"
+		colorroot="\[\e[31m\]"
+		colorssh="\[\e[93m\]"
+		coloruser="\[\e[36m\]"
+		colordefault="\[\e[0m\]"
+
+
+
+		if [ -n "$SSH_CLIENT" ]; then
+			coloruser=$colorssh
+			userps1=$userps1$colorssh" @ \h"
+		fi
+		colorprompt1=$coloruser
+	
+
+		if [ $(id -u) -eq 0 ]; then
+			coloruser=$colorroot
+		fi
+
+
+		PS1=$coloruser"["$userps1$coloruser"]"$colordefault" \W"$coloruser"\$ "$colordefault		
+	;;
+esac
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ########################################################################
