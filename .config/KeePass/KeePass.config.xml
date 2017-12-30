@@ -6,15 +6,23 @@
 	</Meta>
 	<Application>
 		<LastUsedFile>
-			<Path />
+			<Path>../../../data/Keepass/DKI.kdbx</Path>
 			<CredProtMode>Obf</CredProtMode>
 			<CredSaveMode>NoSave</CredSaveMode>
 		</LastUsedFile>
 		<MostRecentlyUsed>
 			<MaxItemCount>12</MaxItemCount>
-			<Items />
+			<Items>
+				<ConnectionInfo>
+					<Path>../../../data/Keepass/DKI.kdbx</Path>
+					<CredProtMode>Obf</CredProtMode>
+					<CredSaveMode>NoSave</CredSaveMode>
+				</ConnectionInfo>
+			</Items>
 		</MostRecentlyUsed>
-		<WorkingDirectories />
+		<WorkingDirectories>
+			<Item>Database@../../../data/Keepass</Item>
+		</WorkingDirectories>
 		<Start>
 			<CheckForUpdate>false</CheckForUpdate>
 			<CheckForUpdateConfigured>true</CheckForUpdateConfigured>
@@ -27,10 +35,10 @@
 	</Application>
 	<Logging />
 	<MainWindow>
-		<X>2</X>
-		<Y>18</Y>
-		<Width>1002</Width>
-		<Height>1087</Height>
+		<X>3</X>
+		<Y>19</Y>
+		<Width>1000</Width>
+		<Height>1085</Height>
 		<SplitterHorizontalFrac>0.8333</SplitterHorizontalFrac>
 		<SplitterVerticalFrac>0.25</SplitterVerticalFrac>
 		<Layout>Default</Layout>
@@ -125,7 +133,12 @@
 		<SearchParameters>
 			<ComparisonMode>InvariantCultureIgnoreCase</ComparisonMode>
 		</SearchParameters>
-		<KeySources />
+		<KeySources>
+			<Association>
+				<DatabasePath>../../../data/Keepass/DKI.kdbx</DatabasePath>
+				<Password>true</Password>
+			</Association>
+		</KeySources>
 	</Defaults>
 	<Integration>
 		<HotKeyGlobalAutoType>0</HotKeyGlobalAutoType>
@@ -140,5 +153,58 @@
 		<ProxyType>System</ProxyType>
 		<ProxyAuthType>Auto</ProxyAuthType>
 	</Integration>
-	<Custom />
+	<Custom>
+		<Item>
+			<Key>KeePassHttp_ReceiveCredentialNotification</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SpecificMatchingOnly</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_UnlockDatabaseRequest</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_AlwaysAllowAccess</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_AlwaysAllowUpdates</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SearchInAllOpenedDatabases</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_HideExpired</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_MatchSchemes</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ReturnStringFields</Key>
+			<Value>false</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ReturnStringFieldsWithKphOnly</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_SortResultByUsername</Key>
+			<Value>true</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ListenerPort</Key>
+			<Value>19455</Value>
+		</Item>
+		<Item>
+			<Key>KeePassHttp_ListenerHost</Key>
+			<Value>localhost</Value>
+		</Item>
+	</Custom>
 </Configuration>
