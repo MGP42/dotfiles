@@ -161,4 +161,7 @@ super + e
 ctrl + alt + n
 	networkmanager_dmenu
 
+ctrl + alt + super + n
+	killall nm-applet; \
+	nm-applet
 
