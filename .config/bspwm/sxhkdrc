@@ -21,7 +21,7 @@ XF86AudioMute
 
 # terminal emulator
 super + Return
-	termite
+	termite -e /bin/zsh
 
 # program launcher
 super + @space
