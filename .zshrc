@@ -13,36 +13,66 @@ compinit
 
 
 
-
 bindkey    "^[[H"    beginning-of-line
 bindkey    "^[[F"    end-of-line
 bindkey    "^[[3~"    delete-char
 
 
+###########################################################
 
+lnext(){
+	spacer=" %F"$2""%F$1%K$2
+	oldfg=$1
+	oldbg=$2
+}
 
-
-
+rnext(){
+	spacer=" %F"$oldbg"%K"$2"%F"$1
+	oldfg=$1
+	oldbg=$2
+}
 
 ###########################################################
 local spacer=''
 local abc=''
 
 
-local coloruserfg='{black}'
-local coloruserbg='{cyan}'
+local coloruserfg='{white}'
+local coloruserbg='{blue}'
 local colorpathfg='{black}'
-local colorpathbg='{green}'
+local colorpathbg='{cyan}'
 local colorfinalfg='{yellow}'
 local colorfinalbg='{red}'
 local colorjobsfg='{black}'
 local colorjobsbg='{white}'
-local colorgitfg='{black}'
+local colorgitfg='{white}'
 local colorgitbg='{red}'
+
+local colorsshfg='{black}'
+local colorsshbg='{yellow}'
+
+local colorrootfg='{white}'
+local colorrootbg='{red}'
 
 local oldfg=$coloruserfg
 local oldbg=$coloruserbg
 
+
+local zshuser=" %n"
+###########################################################
+if [ $(id -u) -eq 0 ]; then
+	coloruserbg=$colorrootbg
+	coloruserfg=$colorrootfg
+	oldbg=$coloruserbg
+fi
+
+if [ -n "$SSH_CLIENT" ]; then
+	rnext %f %k
+	zshuser=$zshuser$spacer""
+	lnext $colorsshfg $colorsshbg
+	zshuser=$zshuser$spacer" %m"
+fi
+	
 
 ###########################################################
 function jobsrunning(){
@@ -67,29 +97,10 @@ function gitinfo(){
 
 
 
-lnext(){
-	spacer=" %F"$2""%F$1%K$2
-	oldfg=$1
-	oldbg=$2
-}
-
-rnext(){
-	spacer=" %F"$oldbg"%K"$2"%F"$1
-	oldfg=$1
-	oldbg=$2
-}
-
-
-
-
-
 
 case "$TERM" in
 	xterm*)
-		oldfg=$coloruserfg
-		oldbg=$coloruserbg
-
-		PROMPT="%{%f%k%}%F"$coloruserfg"%K"$coloruserbg" %n" 
+		PROMPT="%{%f%k%}%F"$coloruserfg"%K"$coloruserbg$zshuser 
 		rnext $colorpathfg $colorpathbg
 		PROMPT+=$spacer" %1~"
 		rnext '' %k
