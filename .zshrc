@@ -48,6 +48,7 @@ local colorjobsbg='{white}'
 local colorgitfg='{white}'
 local colorgitbg='{red}'
 local colorgitbgsynced='{green}'
+local colorgitfgsynced='{black}'
 
 local colorsshfg='{black}'
 local colorsshbg='{yellow}'
@@ -90,7 +91,7 @@ function gitinfo(){
   	if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
 		lnext $colorgitfg $colorgitbg
 	else
-		lnext $colorgitfg $colorgitbgsynced
+		lnext $colorgitfgsynced $colorgitbgsynced
 	fi	
 	if [[ $tmp != '' ]];
 	then
