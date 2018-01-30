@@ -47,6 +47,7 @@ local colorjobsfg='{black}'
 local colorjobsbg='{white}'
 local colorgitfg='{white}'
 local colorgitbg='{red}'
+local colorgitbgsynced='{green}'
 
 local colorsshfg='{black}'
 local colorsshbg='{yellow}'
@@ -93,10 +94,13 @@ gitsynced(){
 
 function gitinfo(){
 	tmp=$(git symbolic-ref HEAD 2> /dev/null) 
+  	if [[ -n "$git_status" ]]; then
+    		colorgitbg=$colorgitbgsynced
+	fi	
 	if [[ $tmp != '' ]];
 	then
 		lnext $colorgitfg $colorgitbg
-		echo $spacer ${tmp#refs/heads/}$(gitsynced)
+		echo $spacer ${tmp#refs/heads/} #$(gitsynced)
 	fi
 }
 
