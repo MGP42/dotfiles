@@ -94,10 +94,10 @@ gitsynced(){
 
 function gitinfo(){
 	tmp=$(git symbolic-ref HEAD 2> /dev/null) 
-  	if [[ -n "$git_status" ]]; then
-		lnext $colorgitfg $colorgitbgsynced
-	else
+  	if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
 		lnext $colorgitfg $colorgitbg
+	else
+		lnext $colorgitfg $colorgitbgsynced
 	fi	
 	if [[ $tmp != '' ]];
 	then
