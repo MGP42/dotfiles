@@ -8,9 +8,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+###########################################################
+export HISTSIZE=2000
+export SAVEHIST=2000
+export HISTFILE=~/.zsh_history
+setopt INC_APPEND_HISTORY
 
-
-
+###########################################################
 
 
 bindkey    "^[[H"    beginning-of-line
