@@ -85,13 +85,6 @@ function jobsrunning(){
 	fi
 }
 
-gitsynced(){
-	local git_status="$(git status --porcelain 2> /dev/null)"
-  	if [[ -n "$git_status" ]]; then
-    		echo "*"
-  	fi
-}
-
 function gitinfo(){
 	tmp=$(git symbolic-ref HEAD 2> /dev/null) 
   	if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
@@ -101,7 +94,7 @@ function gitinfo(){
 	fi	
 	if [[ $tmp != '' ]];
 	then
-		echo $spacer ${tmp#refs/heads/}$(gitsynced)
+		echo $spacer ${tmp#refs/heads/}
 	fi
 }
 
