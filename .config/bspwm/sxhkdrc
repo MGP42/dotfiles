@@ -144,7 +144,7 @@ super + {Left,Down,Up,Right}
 
 # lock
 ctrl + alt + l
-	i3lock -i ~/Bilder/.tmp/lock_bg.png
+	. .config/bspwm/scripts/lock.sh
 
 #
 # Programms
