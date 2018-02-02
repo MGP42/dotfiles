@@ -42,39 +42,39 @@ rnext(){
 local spacer=''
 local abc=''
 
+#user path jobs git gitsynced
 
-local coloruserfg='{white}'
-local coloruserbg='{blue}'
-local colorpathfg='{black}'
-local colorpathbg='{cyan}'
-local colorfinalfg='{yellow}'
-local colorfinalbg='{red}'
-local colorjobsfg='{black}'
-local colorjobsbg='{white}'
-local colorgitfg='{white}'
-local colorgitbg='{red}'
-local colorgitbgsynced='{green}'
-local colorgitfgsynced='{black}'
-
+zsh_color=(
+    '{white}'           #user foreground
+    '{blue}'            #user background
+    '{black}'           #path foreground
+    '{cyan}'            #path background
+    '{black}'           #running jobs foreground
+    '{white}'           #running jobs background
+    '{white}'           #git HEAD not synced foreground
+    '{red}'             #git HEAD not synced background
+    '{black}'           #git HEAD synced foreground
+    '{green}'           #git HEAD synced background
+)
 local colorsshfg='{black}'
 local colorsshbg='{yellow}'
 
 local colorrootfg='{white}'
 local colorrootbg='{red}'
 
-local oldfg=$coloruserfg
-local oldbg=$coloruserbg
+local oldfg=${zsh_color[1]}
+local oldbg=${zsh_color[2]}
 
 
 local zshuser=" %n"
 ###########################################################
-if [ $(id -u) -eq 0 ]; then
-	coloruserbg=$colorrootbg
-	coloruserfg=$colorrootfg
-	oldbg=$coloruserbg
+if [ $(id -u) -eq 0 ]; then             #if user is ROOT change usercolor
+    zsh_color[2]=$colorrootbg
+	zsh_color[1]=$colorrootfg
+	oldbg=${zsh_color[2]}
 fi
 
-if [ -n "$SSH_CLIENT" ]; then
+if [ -n "$SSH_CLIENT" ]; then           #if connected via SSH add Hostnamej
 	rnext %f %k
 	zshuser=$zshuser$spacer""
 	lnext $colorsshfg $colorsshbg
@@ -83,21 +83,21 @@ fi
 	
 
 ###########################################################
-function jobsrunning(){
+function jobsrunning(){                     #get number of background jons running
 	#echo $(jobs -rp | wc -l)
-	if [ $(jobs -rp | wc -l) -ne 0 ];
+	if [ $(jobs -rp | wc -l) -ne 0 ];          #if 0 do not print
 	then
-		lnext $colorjobsfg $colorjobsbg
+		lnext ${zsh_color[5]} ${zsh_color[6]}
 		echo $spacer $(jobs -rp | wc -l)
 	fi
 }
 
-function gitinfo(){
+function gitinfo(){                         #get git info
 	tmp=$(git symbolic-ref HEAD 2> /dev/null) 
-  	if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
-		lnext $colorgitfg $colorgitbg
+  	if [[ -n $(git status --porcelain 2> /dev/null) ]]; then     #is git synced?
+		lnext ${zsh_color[7]} ${zsh_color[8]}
 	else
-		lnext $colorgitfgsynced $colorgitbgsynced
+		lnext ${zsh_color[9]} ${zsh_color[10]}
 	fi	
 	if [[ $tmp != '' ]];
 	then
@@ -114,8 +114,8 @@ function gitinfo(){
 
 case "$TERM" in
 	xterm*)
-		PROMPT="%{%f%k%}%F"$coloruserfg"%K"$coloruserbg$zshuser 
-		rnext $colorpathfg $colorpathbg
+		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zshuser 
+		rnext ${zsh_color[3]} ${zsh_color[4]}
 		PROMPT+=$spacer" %1~"
 		rnext '' %k
 		PROMPT+=$spacer"%f%k "
@@ -124,9 +124,9 @@ case "$TERM" in
 		oldfg=''
 		oldbg=''
 
-		lnext $colorfinalfg $colorfinalbg
+        #RIGHT SIDE
 
-		setopt PROMPT_SUBST
+		setopt PROMPT_SUBST           #function calls active
 		RPROMP="%f%k"
 		RPROMPT+='$(gitinfo)'
 		RPROMPT+='$(jobsrunning)'
