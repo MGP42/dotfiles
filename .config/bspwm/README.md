@@ -4,21 +4,21 @@ DISCLAIMER: the Readme is incomplete and so are the Scripts. Even tho it runs sm
 or missing Programms i forgot to mention.
 
 ## Structure
-	* Programs
-	* Dropdown
-	* Changes
-	* To Do
+	Programs
+	Dropdown
+	Changes
+	To Do
 
 ## Necessary Programs
-	* Conky
-	* Lemonbar
-	* BSPWM
-	* alsa-utils
-	* stalonetray
-	* sxhkdrc
-	* compton
-	* termite
-	* compton
+	Conky
+	Lemonbar
+	BSPWM
+	alsa-utils
+	stalonetray
+	sxhkdrc
+	compton
+	termite
+	compton
 
 ## Changes
 ### Terminal
@@ -34,8 +34,9 @@ or missing Programms i forgot to mention.
 	in the bspwmrc
 
 ### Alsa Utils
-	to replace Alsa Utils you have to replace the volume lines in sxhkdrc and the Volume dropdown in the panel
-	i don't recomend doing that unless you know what you're doing
+	to replace Alsa Utils you have to replace the volume lines in sxhkdrc and the
+	Volume dropdown in the panel.
+	I don't recomend doing that unless you know what you're doing.
 
 ## To Do
 	Autostart still in bspwmrc should be seperated
