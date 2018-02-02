@@ -27,20 +27,19 @@ bindkey    "^[[3~"    delete-char
 ###########################################################
 
 lnext(){
-	spacer=" %F"$2""%F$1%K$2
-	oldfg=$1
-	oldbg=$2
+	zsh_spacer=" %F"$2""%F$1%K$2
+	zsh_color[15]=$1
+	zsh_color[16]=$2
 }
 
 rnext(){
-	spacer=" %F"$oldbg"%K"$2"%F"$1
-	oldfg=$1
-	oldbg=$2
+	zsh_spacer=" %F"${zsh_color[16]}"%K"$2"%F"$1
+	zsh_color[15]=$1
+	zsh_color[16]=$2
 }
 
 ###########################################################
-local spacer=''
-local abc=''
+local zsh_spacer=''
 
 #user path jobs git gitsynced
 
@@ -55,30 +54,27 @@ zsh_color=(
     '{red}'             #git HEAD not synced background
     '{black}'           #git HEAD synced foreground
     '{green}'           #git HEAD synced background
+    '{black}'           #ssh foreground
+    '{yellow}'          #ssh background
+    '{white}'           #root foreground
+    '{red}'             #root background
+    '{white}'               #old color foreground tmp savestate
+    '{blue}'                #old color background tmp savestate
 )
-local colorsshfg='{black}'
-local colorsshbg='{yellow}'
 
-local colorrootfg='{white}'
-local colorrootbg='{red}'
-
-local oldfg=${zsh_color[1]}
-local oldbg=${zsh_color[2]}
-
-
-local zshuser=" %n"
+local zsh_user=" %n"
 ###########################################################
 if [ $(id -u) -eq 0 ]; then             #if user is ROOT change usercolor
-    zsh_color[2]=$colorrootbg
-	zsh_color[1]=$colorrootfg
-	oldbg=${zsh_color[2]}
+    zsh_color[2]=${zsh_color[14]}
+	zsh_color[1]=${zsh_color[13]}
+	zsh_color[16]=${zsh_color[2]}
 fi
 
 if [ -n "$SSH_CLIENT" ]; then           #if connected via SSH add Hostnamej
 	rnext %f %k
-	zshuser=$zshuser$spacer""
-	lnext $colorsshfg $colorsshbg
-	zshuser=$zshuser$spacer" %m"
+	zsh_user=$zsh_user$zsh_spacer""
+	lnext ${zsh_color[11]} ${zsh_color[12]}
+	zsh_user=$zsh_user$zsh_spacer" %m"
 fi
 	
 
@@ -88,7 +84,7 @@ function jobsrunning(){                     #get number of background jons runni
 	if [ $(jobs -rp | wc -l) -ne 0 ];          #if 0 do not print
 	then
 		lnext ${zsh_color[5]} ${zsh_color[6]}
-		echo $spacer $(jobs -rp | wc -l)
+		echo $zsh_spacer $(jobs -rp | wc -l)
 	fi
 }
 
@@ -101,7 +97,7 @@ function gitinfo(){                         #get git info
 	fi	
 	if [[ $tmp != '' ]];
 	then
-		echo $spacer ${tmp#refs/heads/}
+		echo $zsh_spacer ${tmp#refs/heads/}
 	fi
 }
 
@@ -114,15 +110,15 @@ function gitinfo(){                         #get git info
 
 case "$TERM" in
 	xterm*)
-		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zshuser 
+		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zsh_user 
 		rnext ${zsh_color[3]} ${zsh_color[4]}
-		PROMPT+=$spacer" %1~"
+		PROMPT+=$zsh_spacer" %1~"
 		rnext '' %k
-		PROMPT+=$spacer"%f%k "
+		PROMPT+=$zsh_spacer"%f%k "
 		
 
-		oldfg=''
-		oldbg=''
+		zsh_color[15]=''
+		zsh_color[16]=''
 
         #RIGHT SIDE
 
