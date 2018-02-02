@@ -1,49 +1,41 @@
-#test
-
-# Lines configured by zsh-newuser-install
-unsetopt beep
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+unsetopt beep                               #disable beeping
 zstyle :compinstall filename '/home/dki/.zshrc'
-
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
-###########################################################
-export HISTSIZE=2000
+# HISTORY ##############################################################
+########################################################################
+export HISTSIZE=2000                        #History Size
 export SAVEHIST=2000
-export HISTFILE=~/.zsh_history
+export HISTFILE=~/.zsh_history              #History File
 setopt INC_APPEND_HISTORY
 
-###########################################################
+# BINDKEY ##############################################################
+########################################################################
 
 
 bindkey    "^[[H"    beginning-of-line
 bindkey    "^[[F"    end-of-line
 bindkey    "^[[3~"    delete-char
 
+# SPACER ###############################################################
+########################################################################
 
-###########################################################
-
-lnext(){
+lnext(){                            #left Arrow spacer
 	zsh_spacer=" %F"$2""%F$1%K$2
 	zsh_color[15]=$1
 	zsh_color[16]=$2
 }
-
-rnext(){
+rnext(){                            #right Arrow spacer
 	zsh_spacer=" %F"${zsh_color[16]}"%K"$2"%F"$1
 	zsh_color[15]=$1
 	zsh_color[16]=$2
 }
 
-###########################################################
-local zsh_spacer=''
+# GLOBAL VARIABLES #####################################################
+########################################################################
 
-#user path jobs git gitsynced
-
-zsh_color=(
+local zsh_color=(
     '{white}'           #user foreground
     '{blue}'            #user background
     '{black}'           #path foreground
@@ -62,8 +54,11 @@ zsh_color=(
     '{blue}'                #old color background tmp savestate
 )
 
-local zsh_user=" %n"
-###########################################################
+local zsh_spacer=''     #tmp spacer save state | cause subroutine global variable change does not work
+local zsh_user=" %n"    #user design | contains HOST if on SSH
+
+# DEFINE USER ##########################################################
+########################################################################
 if [ $(id -u) -eq 0 ]; then             #if user is ROOT change usercolor
     zsh_color[2]=${zsh_color[14]}
 	zsh_color[1]=${zsh_color[13]}
@@ -77,8 +72,8 @@ if [ -n "$SSH_CLIENT" ]; then           #if connected via SSH add Hostnamej
 	zsh_user=$zsh_user$zsh_spacer" %m"
 fi
 	
-
-###########################################################
+# INFO COLLECTOR #######################################################
+########################################################################
 function jobsrunning(){                     #get number of background jons running
 	#echo $(jobs -rp | wc -l)
 	if [ $(jobs -rp | wc -l) -ne 0 ];          #if 0 do not print
@@ -101,29 +96,24 @@ function gitinfo(){                         #get git info
 	fi
 }
 
-
-
-##########################################################
-
-
-
+# PROMPT ###############################################################
+########################################################################
 
 case "$TERM" in
 	xterm*)
 		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zsh_user 
-		rnext ${zsh_color[3]} ${zsh_color[4]}
+		rnext ${zsh_color[3]} ${zsh_color[4]}     #spacer to path
 		PROMPT+=$zsh_spacer" %1~"
-		rnext '' %k
+		rnext '' %k                               #spacer to input
 		PROMPT+=$zsh_spacer"%f%k "
 		
-
-		zsh_color[15]=''
-		zsh_color[16]=''
-
+        
         #RIGHT SIDE
+		
+		zsh_color[15]=''                          #reset tmp old color for reuse on right side
+		zsh_color[16]=''                          #reset tmp old color for reuse on right side
 
 		setopt PROMPT_SUBST           #function calls active
-		RPROMP="%f%k"
 		RPROMPT+='$(gitinfo)'
 		RPROMPT+='$(jobsrunning)'
 
@@ -133,10 +123,7 @@ case "$TERM" in
 	;;
 esac
 
-
-
-########################################################################
-############################ alias #####################################
+# ALIAS ################################################################
 ########################################################################
 alias "cd.."="cd .."
 alias "pacman"="sudo pacman"
@@ -145,20 +132,12 @@ alias "ls"="ls --color=auto"
 alias "dolphin"="DESKTOP_SESSION=kde dolphin"
 alias "unilpq"='ssh uni "lpq; echo ; lpq -P zarquon"'
 
-########################################################################
-############################## export ##################################
+# EXPORT ###############################################################
 ########################################################################
 export EDITOR=nano
-
 export PATH=~/.local/bin:$PATH
-
-
-##### bspwm
-#export PANEL_FIFO="/tmp/panel-fifo"
-#export PATH=$PATH:/home/dki/.config/bspwm/panel/
-#then: source ~/.bashrc
-# setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &
-
 export TERM=xterm
+
+
 
 clear
