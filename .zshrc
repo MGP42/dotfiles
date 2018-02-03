@@ -36,7 +36,8 @@ rnext(){                            #right Arrow spacer
 # GLOBAL VARIABLES #####################################################
 ########################################################################
 
-local zsh_color=(
+local -a zsh_color	#define before initialize BS
+zsh_color=(
     '{white}'           #user foreground
     '{blue}'            #user background
     '{black}'           #path foreground
