@@ -38,7 +38,7 @@ xinput set-prop 12 284 1 1					# enable 2 Finger Scroll (any Direction)
 ##### System Stuff
 bash ~/.config/bspwm/panel/lemonbar.sh &			#Info Bar
 feh --bg-fill ~/Bilder/.tmp/desktop_bg.png &			#Wallpaper
-xss-lock ~/.config/bspwm/scripts/lock.sh			#Lockscreen after Standby
+xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 
 
