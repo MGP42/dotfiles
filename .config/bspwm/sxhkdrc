@@ -24,7 +24,7 @@ super + Return
 	termite -e /bin/zsh
 
 # program launcher
-super + @space
+super + space
 	dmenu_run
 
 # make sxhkd reload its configuration files:
