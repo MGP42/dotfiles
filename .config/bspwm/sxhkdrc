@@ -171,3 +171,5 @@ ctrl + alt + super + n
 	killall nm-applet; \
 	nm-applet
 
+ctrl + alt + m 
+	bash ~/.config/bspwm/scripts/open-telegram-desktop.sh
