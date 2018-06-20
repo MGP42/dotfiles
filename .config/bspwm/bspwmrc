@@ -1,5 +1,4 @@
 #! /bin/sh
-
 setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		#Keyboard to DE
 xsetroot -cursor_name left_ptr							#Mouse
 
