@@ -25,7 +25,8 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run
+	rofi -show run -font 'ttf-dejavu Regular 9' -opacity "50" -lines 5  -line-margin 1 -hide-scrollbar -width 100 -location 1 -yoffset 16 -color-window "#000000 ,#000000" -color-normal "#000000, #ffffff,#000000,#55C2ED ,#000000"
+	#dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
