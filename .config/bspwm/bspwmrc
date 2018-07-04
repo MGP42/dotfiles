@@ -46,7 +46,7 @@ sleep 1				#in Case of Programs not loaded for satlonetray
 sxhkd &
 dropbox &
 kdeconnect-indicator &
-telegram-desktop &		# this on especially
+telegram-desktop & #		# this on especially
 ##################
 
 
