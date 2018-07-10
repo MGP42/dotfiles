@@ -1,1 +1,0 @@
-termite -e "bash $(dirname $0)/dropdown/termite_alsamixer"
