@@ -3,6 +3,8 @@
 	<Meta>
 		<PreferUserConfiguration>false</PreferUserConfiguration>
 		<OmitItemsWithDefaultValues>true</OmitItemsWithDefaultValues>
+		<DpiFactorX>1</DpiFactorX>
+		<DpiFactorY>1</DpiFactorY>
 	</Meta>
 	<Application>
 		<LastUsedFile>
