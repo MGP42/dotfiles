@@ -3,6 +3,11 @@
 . $(dirname $0)/path.conf
 . $(dirname $0)/style.conf
 
+[ -e "${memory}" ] && rm -rf "${memory}"
+mkdir $memory
+cp $(dirname $0)/memory_preset/* $memory
+
+
 monitor=eDP-1
 
 geometry=$(xrandr | grep $monitor | cut -d' ' -f 4 | sed  's/x[^+-]*+/x'"$geo_height"'+/g'  )
