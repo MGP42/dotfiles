@@ -1,4 +1,5 @@
 # start some nice programs
+# export BROWSER=/usr/bin/chromium
 
 # SSH-AGENT
 eval $(ssh-agent)

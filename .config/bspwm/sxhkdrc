@@ -1,5 +1,3 @@
-XF86MonBrightnessDown \	killall stalonetray
-
 XF86AudioRaiseVolume
 	amixer sset Master 1+ unmute; \ 
 	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp

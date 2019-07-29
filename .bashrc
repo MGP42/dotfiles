@@ -89,7 +89,7 @@ alias "unilpq"='ssh uni "lpq; echo ; lpq -P zarquon"'
 export EDITOR=nano
 
 export PATH=~/.local/bin:$PATH
-
+export TERM=termite
 
 ##### bspwm
 #export PANEL_FIFO="/tmp/panel-fifo"

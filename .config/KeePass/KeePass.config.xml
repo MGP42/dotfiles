@@ -34,13 +34,16 @@
 		<TriggerSystem>
 			<Triggers />
 		</TriggerSystem>
+		<PluginCompatibility>
+			<Item>@AV33lUM4LzVYFOtkJHpnS7wn2ZhB18yH66pLJA71SkU=@2.40.0.35472@1</Item>
+		</PluginCompatibility>
 	</Application>
 	<Logging />
 	<MainWindow>
-		<X>0</X>
-		<Y>16</Y>
-		<Width>1928</Width>
-		<Height>1091</Height>
+		<X>963</X>
+		<Y>19</Y>
+		<Width>962</Width>
+		<Height>1085</Height>
 		<SplitterHorizontalFrac>0.8333</SplitterHorizontalFrac>
 		<SplitterVerticalFrac>0.25</SplitterVerticalFrac>
 		<Layout>Default</Layout>
