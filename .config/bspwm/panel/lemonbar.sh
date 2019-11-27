@@ -80,8 +80,7 @@ Window(){
 
 
 Volume(){
-	echo  "volume\ $(amixer get Master | grep "${snd_cha}" | awk -F'[]%[]' '/%/ {if ($7 == "off") {print "×"} else {printf "%d%", $2}}')">> ${panel_fifo}
-	#echo   "volume\ $(amixer get Master | grep "${snd_cha}" | awk -F ' ' '/%/ {if ($6 == "[off]") {print "×"} else {printf "%s%\n\n", $3}}')" >> ${panel_fifo}
+	echo  "volume\ $(amixer get Master |tail -1| awk -F'[][]' '/%/ {if ($4 == "off") {print "×"} else {printf "%s", $2}}')" >> ${panel_fifo}
 }
 
 Desktop(){
