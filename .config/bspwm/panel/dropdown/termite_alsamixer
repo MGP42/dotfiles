@@ -1,0 +1,5 @@
+bspc node -t floating
+bspc node -z right 200 0
+bspc node -z left -200 0
+alsamixer -g
+echo "extern\ Volume" >>$(dirname $0)/../lb_fifo.tmp

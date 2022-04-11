@@ -1,0 +1,37 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": ""
+    },
+    "Session": {
+        "Bookmarks": [
+            {
+                "bookmarkNumber": -1,
+                "fileName": "../../../../data/Documents/Universität/Theo III/Zusammenfassung/doc.tex",
+                "lineNumber": 34,
+                "text": "doc.tex\n\\node[anchor=north west] at (0,1.4em){\\Large \\color{blue}\\textbf{Diskrete Strukturen}};"
+            }
+        ],
+        "CurrentFile": "../../../../usr/share/texmf-dist/tex/latex/filecontents/filecontents.sty",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 256,
+                "EditorGroup": 0,
+                "FileName": "../../Documents/Universität/Berechenbarkeit und Komplexität/Abgaben/008/008.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 76
+            },
+            {
+                "Col": 38,
+                "EditorGroup": 0,
+                "FileName": "../../../../usr/share/texmf-dist/tex/latex/filecontents/filecontents.sty",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 13
+            }
+        ],
+        "MasterFile": ""
+    }
+}

@@ -1,0 +1,50 @@
+conky.config = {
+   own_window = true,
+   background = true,
+   own_window_transparent = false,
+   own_window_type =  'dock',
+   own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+   own_window_argb_visual = true,
+   own_window_argb_value = 1000,
+   use_xft = true,
+   xftalpha = 1.0,
+   update_interval = 1.0,
+   total_run_times = 0,
+   double_buffer = true,
+   draw_shades = false,
+   draw_outline = true,
+   draw_borders = true,
+   draw_graph_borders = false,
+   minimum_height = 200,
+   maximum_width = 450,
+   border_width = 0,
+   default_color = 'FFFFFF',
+   color1 = 'DDDDDD',
+   color2 = 'AAAAAA',
+   color3 = '888888',
+   color4 = '048ecf',
+   color5 = '77B753',
+   font = 'DejaVu Sans Mono:size=9',
+   alignment =  'top_right',
+   gap_x = 350,
+   gap_y = 20,
+   no_buffers = true,
+   cpu_avg_samples = 2,
+   override_utf8_locale = true,
+   use_spacer =  'right',
+}
+
+conky.text = [[
+CPU
+Core 1: ${cpubar 6,90,1}${alignr}${cpu cpu 1}%
+Core 2: ${cpubar 6,90,2}${alignr}${cpu cpu 2}%
+Core 3: ${cpubar 6,90,3}${alignr}${cpu cpu 3}%
+Core 4: ${cpubar 6,90,4}${alignr}${cpu cpu 4}%
+${cpugraph 20,180,0}
+${top name 1}${alignr}${offset 0}${top cpu 1}%
+${top name 2}${alignr}${offset 0}${top cpu 2}%
+${top name 3}${alignr}${offset 0}${top cpu 3}%
+${top name 4}${alignr}${offset 0}${top cpu 4}%
+${top name 5}${alignr}${offset 0}${top cpu 5}%
+${top name 6}${alignr}${offset 0}${top cpu 6}%
+]]

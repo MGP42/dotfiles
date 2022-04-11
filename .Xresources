@@ -1,0 +1,17 @@
+rofi.modi:                 	run,ssh,drun
+rofi.opacity:              	50
+rofi.width:                	100
+rofi.lines:                	5
+rofi.line-margin:		1
+rofi.hide-scrollbar:		true
+rofi.location:			1
+rofi.yoffset:			16
+rofi.font:                 	Terminus 9
+rofi.color-window:		#000000,#000000
+rofi.color-normal: 		#000000, #ffffff,#000000,#55C2ED,#000000
+rofi.terminal:             	termite
+rofi.ssh-client:           	ssh
+rofi.ssh-command:          	{terminal} -e "{ssh-client} {host}"
+rofi.run-command:          	{cmd}
+rofi.run-shell-command:    	{terminal} -e {cmd}
+rofi.separator-style:		solid

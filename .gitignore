@@ -1,0 +1,20 @@
+#DON'T ADD ANYTHING EXCEPT DOTFILES
+#BUT NO DOTFOLDERS
+/*
+!.*
+.*/
+
+!.fonts
+!.texlive
+
+!.config/
+.config/*
+!.config/bspwm
+!.config/texstudio
+*.pem
+
+#BUT EXCLUDE SPECIFIC DOTFILES ANYWAY
+*history*
+*.log
+.lesshst
+.Xauth*

@@ -1,0 +1,3 @@
+
+
+termite -e "bash /home/$USER/.config/bspwm/panel/dropdown/termite_alsamixer" > /dev/null &
