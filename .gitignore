@@ -4,17 +4,24 @@
 !.*
 .*/
 
-!.fonts
+#ADD THESE DOTFOLDERS/Files
+!.font*
 !.texlive
 
 !.config/
 .config/*
 !.config/bspwm
+!.config/kdeglobals
+!.config/spectaclerc
+!.config/rofi
 !.config/texstudio
-*.pem
+!.config/gtk*
+!.config/dolphinrc
+!.config/QtProject.conf
 
 #BUT EXCLUDE SPECIFIC DOTFILES ANYWAY
 *history*
 *.log
 .lesshst
 .Xauth*
+*.pem

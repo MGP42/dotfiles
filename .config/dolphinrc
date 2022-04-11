@@ -1,0 +1,49 @@
+[Desktop Entry]
+DefaultProfile=
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+Version=201
+ViewPropsTimestamp=2018,9,12,15,16,58
+
+[KPropertiesDialog]
+Height 1080=416
+Width 1920=412
+eDP-1 Height 1080=458
+eDP-1 Height 1920x1080=606
+eDP-1 Width 1920=377
+eDP-1 Width 1920x1080=635
+
+[MainWindow]
+Height 1080=1058
+Height 1200=480
+RestorePositionForNextInstance=false
+ToolBarsMovable=Disabled
+Width 1920=1914
+eDP-1 Height 1080=526
+eDP-1 Height 1920x1080=1058
+eDP-1 Width 1920=954
+eDP-1 Width 1920x1080=1914
+eDP-1 XPosition=3
+eDP-1 XPosition 1920x1080=3
+eDP-1 YPosition=16
+eDP-1 YPosition 1920x1080=19
+
+[Open-with settings]
+CompletionMode=1
+History=mpv,vlc,texst,gan
+
+[Search]
+Location=Everywhere
+
+[SettingsDialog]
+Height 1080=457
+Width 1920=694
+
+[ViewPropertiesDialog]
+Height 1080=318
+Width 1920=488
+eDP-1 Height 1920x1080=334
+eDP-1 Width 1920x1080=488

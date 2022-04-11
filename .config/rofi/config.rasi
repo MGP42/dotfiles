@@ -1,0 +1,39 @@
+configuration {
+ modi: "drun";
+ font: "hack 10";
+ location: 1;
+ xoffset: 0;
+ yoffset: 0;
+ show-icons: false;
+}
+window {
+ width: 100%;
+ border: 0;
+ background-color: rgba (0,0,0,100%);
+ padding: 0;
+}
+entry {
+ text-color: rgba(200,200,200,100%);
+}
+element {
+ border: 0;
+ spacing: 0px;
+ padding: 0px; 
+}
+element-text {
+// background-color: rgba(0,0,0,100%);
+ text-color: rgba(200,200,200,100%);
+}
+scrollbar {
+ width: 0px ;
+ border: 0px ;
+}
+element normal.normal{
+ background-color: rgba(0,0,0,100%);
+}
+element alternate.normal{
+ background-color: rgba(0,0,0,100%);
+}
+element selected.normal{
+ background-color: rgba(50,50,50,100%);
+}
