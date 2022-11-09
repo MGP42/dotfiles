@@ -1,7 +1,7 @@
 {
     "InternalPDFViewer": {
         "Embedded": true,
-        "File": ""
+        "File": "../../../../data/Documents/Leibniz FH/Wertschöpfung/Notes.pdf"
     },
     "Session": {
         "Bookmarks": [
@@ -12,26 +12,19 @@
                 "text": "doc.tex\n\\node[anchor=north west] at (0,1.4em){\\Large \\color{blue}\\textbf{Diskrete Strukturen}};"
             }
         ],
-        "CurrentFile": "../../../../usr/share/texmf-dist/tex/latex/filecontents/filecontents.sty",
+        "CurrentFile": "../../Documents/Leibniz FH/Wertschöpfung/Notes.tex",
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 256,
+                "Col": 0,
                 "EditorGroup": 0,
-                "FileName": "../../Documents/Universität/Berechenbarkeit und Komplexität/Abgaben/008/008.tex",
+                "FileName": "../../Documents/Leibniz FH/Wertschöpfung/Notes.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 76
-            },
-            {
-                "Col": 38,
-                "EditorGroup": 0,
-                "FileName": "../../../../usr/share/texmf-dist/tex/latex/filecontents/filecontents.sty",
-                "FirstLine": 0,
-                "FoldedLines": "",
-                "Line": 13
+                "Line": 15
             }
         ],
-        "MasterFile": ""
+        "MasterFile": "",
+        "VerticalSplit": false
     }
 }

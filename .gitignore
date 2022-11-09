@@ -3,10 +3,8 @@
 /*
 !.*
 .*/
-
 #ADD THESE DOTFOLDERS/Files
 !.font*
-!.texlive
 
 !.config/
 .config/*
@@ -18,6 +16,8 @@
 !.config/gtk*
 !.config/dolphinrc
 !.config/QtProject.conf
+
+.texlive*
 
 #BUT EXCLUDE SPECIFIC DOTFILES ANYWAY
 *history*

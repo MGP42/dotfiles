@@ -5,8 +5,12 @@ DefaultProfile=
 Favorites=
 
 [General]
-Version=201
+Version=202
 ViewPropsTimestamp=2018,9,12,15,16,58
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
 
 [KPropertiesDialog]
 Height 1080=416
