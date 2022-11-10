@@ -1,3 +1,6 @@
+XF86Calculator
+	speedcrunch
+
 XF86AudioRaiseVolume
 	amixer sset Master 650+ unmute; \ 
 	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
