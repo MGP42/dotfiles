@@ -14,8 +14,8 @@ conky.config={
 
 conky.text = [[
 	# Network
-	${if_match "${addr enp1s0}" != "No Address"}network\ ${downspeedf enp1s0} + ${upspeedf enp1s0}
-	${else}${if_match "${addr wlp2s0}" != "No Address"}network\ ${downspeedf wlp2s0}+${upspeedf wlp2s0}
+	${if_match "${addr enp0s31f6}" != "No Address"}network\ ${downspeedf enp0s31f6} + ${upspeedf enp0s31f6}
+	${else}${if_match "${addr wlp0s20f3}" != "No Address"}network\ ${downspeedf wlp0s20f3}+${upspeedf wlp0s20f3}
         ${else}network\ x+x${endif}${endif}
 	####################################
 	cpu\${cpu cpu0}

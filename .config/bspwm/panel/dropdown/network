@@ -36,13 +36,13 @@ conky.config = {
 
 conky.text = [[
 Ethernet
-Intern IP: ${alignr}${addr enp1s0}
+Intern IP: ${alignr}${addr enp0s31f6}
 
 WLAN
-SSID: ${alignr} ${wireless_essid wlp2s0}
-Intern IP: ${alignr}${addr wlp2s0}
+SSID: ${alignr} ${wireless_essid wlp0s20f3}
+Intern IP: ${alignr}${addr wlp0s20f3}
 Gateway: ${alignr} ${gw_ip}
-Access Point: ${alignr} ${wireless_ap wlp2s0}
+Access Point: ${alignr} ${wireless_ap wlp0s20f3}
 
 Public IP: ${alignr} ${execi 600 bash public_ip.sh}
 Ping: ${alignr} ${execi 10 ping 8.8.8.8 -c 1 | awk -F "=" '{printf $4}'}

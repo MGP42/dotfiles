@@ -29,7 +29,8 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 ##### Mouse / Touchpad
-xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 3 2	#enable Tapping
+#xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 3 2	#enable Tapping
+xinput set-prop "ELAN0683:00 04F3:320B Touchpad" "libinput Tapping Enabled" 1
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 1	#enable 2 Finger Scroll (any Direction)
 
 
