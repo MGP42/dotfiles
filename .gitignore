@@ -16,6 +16,7 @@
 !.config/gtk*
 !.config/dolphinrc
 !.config/QtProject.conf
+!.config/chromium-flags.conf
 
 .texlive*
 .config/QtProject.conf
