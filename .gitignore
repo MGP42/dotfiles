@@ -1,5 +1,5 @@
 #DON'T ADD ANYTHING EXCEPT DOTFILES
-#BUT NO DOTFOLDERS
+<#BUT NO DOTFOLDERS
 /*
 !.*
 .*/
@@ -26,3 +26,4 @@
 .lesshst
 .Xauth*
 *.pem
+.zcompdump
