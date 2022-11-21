@@ -171,7 +171,7 @@ super + e
 	DESKTOP_SESSION=kde dolphin
 
 ctrl + alt + n
-	networkmanager_dmenu
+	networkmanager_dmenu -l 30
 
 ctrl + alt + super + n
 	killall nm-applet; \
