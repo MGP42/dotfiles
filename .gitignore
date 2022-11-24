@@ -27,3 +27,4 @@
 .Xauth*
 *.pem
 .zcompdump
+.config/dolphinrc
