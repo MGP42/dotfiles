@@ -141,12 +141,15 @@ Name=Breeze Light
 shadeSortColumn=true
 widgetStyle=Breeze
 
+[Icons]
+Theme=breeze-dark
+
 [KDE]
 AnimationDurationFactor=0
 ColorScheme=Breeze
 LookAndFeelPackage=org.kde.breezedark.desktop
 contrast=4
-widgetStyle=Breeze
+widgetStyle=qt5ct-style
 
 [KFileDialog Settings]
 Allow Expansion=false
