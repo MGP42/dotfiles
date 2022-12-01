@@ -20,7 +20,7 @@ includeDecorations=true
 includePointer=false
 onClickChecked=false
 quitAfterSaveCopyExport=true
-window-position=448,330
+window-position=467,387
 
 [Save]
 compressionQuality=90

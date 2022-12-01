@@ -28,3 +28,4 @@
 *.pem
 .zcompdump
 .config/dolphinrc
+.recently-used
