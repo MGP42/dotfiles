@@ -19,9 +19,9 @@ XF86AudioMute
         echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
 
 XF86MonBrightnessDown
-	echo $(($(cat /sys/class/backlight/intel_backlight/brightness) -1000)) > /sys/class/backlight/intel_backlight/brightness
+	sudo echo $(($(cat /sys/class/backlight/intel_backlight/brightness) -1000)) > /sys/class/backlight/intel_backlight/brightness
 XF86MonBrightnessUp
-	echo $(($(cat /sys/class/backlight/intel_backlight/brightness) +1000)) > /sys/class/backlight/intel_backlight/brightness
+	sudo echo $(($(cat /sys/class/backlight/intel_backlight/brightness) +1000)) > /sys/class/backlight/intel_backlight/brightness
 
 #
 # wm independent hotkeys
