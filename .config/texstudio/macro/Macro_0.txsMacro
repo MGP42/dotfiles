@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Rightarrow",
+    "shortcut": "",
+    "tag": [
+        "\\textbf{\\textrightarrow}"
+    ],
+    "trigger": "-->"
+}
