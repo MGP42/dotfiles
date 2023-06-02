@@ -3,7 +3,7 @@
 
 # SSH-AGENT
 eval $(ssh-agent)
-ssh-add ~/.ssh/github
+ssh-add ~/.ssh/github-MGP42
 ssh-add ~/.ssh/gitlab
 
 
