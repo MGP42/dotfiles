@@ -1,0 +1,48 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "$ $1 $",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && !editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "$ $TM_SELECTED_TEXT $$0",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && editorHasSelection"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\\\\\\\\n",
+            "to": "right"
+        },
+        "when": "editorLangId==latex"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\textbf{$TM_SELECTED_TEXT}$0",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\textbf{$1}$2",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && !editorHasSelection"
+    },
+]

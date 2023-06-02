@@ -1,0 +1,47 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "grammarly.files.include": [
+        "**/readme.md",
+        "**/README.md",
+        "**/*.txt",
+        "**/*.tex"
+    ],
+    "git.confirmSync": false,
+    "workbench.startupEditor": "none",
+    "latex-workshop.view.pdf.invert": "0.88",
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    // "latex-workshop.latex.recipes": [
+    //     {
+    //         "name": "lualatex->biber->lualatex",
+    //         "tools": [
+    //             "lualatex",
+    //             "biber",
+    //             "lualatex"
+    //         ]
+    //     }
+    // ],
+    // "latex-workshop.latex.tools": [
+    //     {
+    //         "name": "lualatex",
+    //         "command": "lualatex",
+    //         "args": [
+    //             "-synctex=1",
+    //             "-interaction=nonstopmode",
+    //             "-file-line-error",
+    //             "-pdf",
+    //             "%DOC%"
+    //         ]
+    //     },
+    //     {
+    //         "name": "biber",
+    //         "command": "biber",
+    //         "args": [
+    //             "%DOCFILE%"
+    //         ]
+    //     }
+    // ]
+}

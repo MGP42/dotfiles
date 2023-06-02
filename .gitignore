@@ -17,6 +17,9 @@
 !.config/dolphinrc
 !.config/QtProject.conf
 !.config/chromium-flags.conf
+!.config/Code/User/snippets/
+!.config/Code/Users/keybindings.json
+!.config/Code/Users/settings.json
 
 .texlive*
 .config/QtProject.conf
