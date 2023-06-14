@@ -28,6 +28,7 @@
 			"\\usepackage{amssymb}",
 			"\\usepackage{hyperref}",
 			"",
+			"\\pgfplotsset{compat=1.18}",
 			"\\newcommand{\\script}[1]{\\includegraphics[page=#1, width=15cm]{../Script/Script.pdf}}",
 			"",
 			"\\begin{document}",
