@@ -21,7 +21,7 @@
 		"Vorlesung":{
 		"prefix": "Vorlesung",
 		"body": [
-			"\\documentclass[border=2mm,varwidth=\\maxdimen]{standalone}",
+			"\\documentclass[border=2mm,varwidth]{standalone}",
 			"\\usepackage{pgfplots}",
 			"\\usepackage{mathtools}",
 			"\\usepackage{amsmath}",
