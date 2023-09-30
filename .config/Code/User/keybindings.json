@@ -45,4 +45,22 @@
         },
         "when": "editorLangId==latex && !editorHasSelection"
     },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\textit{$TM_SELECTED_TEXT}$0",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\textit{$1}$2",
+            "to": "right"
+        },
+        "when": "editorLangId==latex && !editorHasSelection"
+    }
 ]

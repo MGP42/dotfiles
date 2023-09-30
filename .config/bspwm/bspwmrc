@@ -28,6 +28,9 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+
 ##### Mouse / Touchpad
 #xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 3 2	#enable Tapping
 xinput set-prop "ELAN0683:00 04F3:320B Touchpad" "libinput Tapping Enabled" 1
@@ -36,7 +39,9 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 
 
 
 ##### System Stuff
-bash ~/.config/bspwm/panel/lemonbar.sh &			#Info Bar
+#bash ~/.config/bspwm/panel/lemonbar.sh &			#Info Bar
+#keepass &
+bash ~/.config/bspwm/polybar_launch.sh &			#Info Bar
 feh --bg-fill ~/Bilder/.tmp/desktop_bg.png &			#Wallpaper
 xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
@@ -45,7 +50,7 @@ xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 sleep 1				#in Case of Programs not loaded for satlonetray
 ###### AUTOSTART
 sxhkd &
-dropbox &
+#dropbox &
 kdeconnect-indicator &
 telegram-desktop & #		# this on especially
 ##################

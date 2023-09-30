@@ -55,6 +55,7 @@
     "markdown": false,
     "scminput": false
   },
+  "editor.fontFamily": "'Droid Sans Mono','monospace','Font Awesome 6 Free Solid'",
   // "latex-workshop.latex.recipes": [
   //   {
   //     "name": "LuaLaTeX ➞ makeglossaries ➞ LuaLaTeX (2x)",

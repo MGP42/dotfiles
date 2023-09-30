@@ -8,6 +8,7 @@
 
 !.config/
 .config/*
+!.config/polybar
 !.config/bspwm
 !.config/kdeglobals
 !.config/spectaclerc

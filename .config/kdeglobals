@@ -138,6 +138,9 @@ ForegroundVisited=155,89,182
 [General]
 Name[de_DE]=Breeze-Hell
 Name=Breeze Light
+XftHintStyle=hintslight
+XftSubPixel=rgb
+font=Noto Sans,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
 widgetStyle=Breeze
 
