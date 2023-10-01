@@ -18,11 +18,8 @@ XF86AudioMute
 	amixer sset Headphone unmute; \
         echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
 
-XF86MonBrightnessDown
-	sudo echo $(($(cat /sys/class/backlight/intel_backlight/brightness) -1000)) > /sys/class/backlight/intel_backlight/brightness
-XF86MonBrightnessUp
-	sudo echo $(($(cat /sys/class/backlight/intel_backlight/brightness) +1000)) > /sys/class/backlight/intel_backlight/brightness
-
+XF86MonBrightness{Up,Down}
+	brightnessctl s 970{+,-}
 #
 # wm independent hotkeys
 #
