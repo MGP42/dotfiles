@@ -165,7 +165,7 @@ ctrl + alt + l
 # Keepass
 
 ctrl + alt + k
-	keepass
+	keepassxc
 
 super + e
 	DESKTOP_SESSION=kde dolphin

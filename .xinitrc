@@ -7,7 +7,7 @@ ssh-add ~/.ssh/github-MGP42
 ssh-add ~/.ssh/gitlab
 
 # CLOUD
-syncthing &
+syncthing --no-browser &
 
 # XServer
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
