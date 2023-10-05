@@ -103,8 +103,6 @@ function gitinfo(){                         #get git info
 # PROMPT ###############################################################
 ########################################################################
 
-case "$TERM" in
-	xterm*)
 		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zsh_user 
 		rnext ${zsh_color[3]} ${zsh_color[4]}     #spacer to path
 		PROMPT+=$zsh_spacer" %1~"
@@ -122,10 +120,6 @@ case "$TERM" in
 		RPROMPT+='$(jobsrunning)'
 
 		RPROMPT+=" %f%k"
-	;;
-	*)
-	;;
-esac
 
 # ALIAS ################################################################
 ########################################################################
