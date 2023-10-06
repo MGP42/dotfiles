@@ -5,18 +5,15 @@ XF86Calculator
 	speedcrunch
 
 XF86AudioRaiseVolume
-	amixer sset Master 650+ unmute; \ 
-	echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	amixer sset Master 650+ unmute; 
 
 XF86AudioLowerVolume
-	amixer sset Master 650- unmute; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
+	amixer sset Master 650- unmute;
 
 XF86AudioMute
 	amixer sset Master {mute,unmute}; \
 	amixer sset Speaker unmute; \
-	amixer sset Headphone unmute; \
-        echo "extern\ Volume" >> ~/.config/bspwm/panel/lb_fifo.tmp && exit
+	amixer sset Headphone unmute;
 
 XF86MonBrightness{Up,Down}
 	brightnessctl s 970{+,-}
@@ -47,8 +44,7 @@ super + alt + Escape
 
 # close and kill
 super + {_,shift + }w
-	bspc node -{c,k}; \
-        echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc node -{c,k};
 
 
 # alternate between the tiled and monocle layout
@@ -81,8 +77,7 @@ super + ctrl + {x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{j,k,i,l}
-	bspc node -{f,s} {west,south,north,east}; \ 
-	echo "extern\ Fast_Window" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc node -{f,s} {west,south,north,east}; 
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -90,8 +85,7 @@ super + {p,b,comma,period}
 
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local; \ 
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc node -f {next,prev}.local; 
 
 # focus the next/previous desktop in the current monitor
 alt + {_,shift + } Tab
@@ -99,23 +93,21 @@ alt + {_,shift + } Tab
 
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last; \ 
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc {node,desktop} -f last; 
 
 # focus the older or newer node in the focus history
 super + {o,i}
 	bspc wm -h off; \ 
-	bspc node {older,newer} -f; \ bspc wm -h on
+	bspc node {older,newer} -f; \ 
+	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} "$(bspc query -m -M)":^{1-9,10}; \ 
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc {desktop -f,node -d} "$(bspc query -m -M)":^{1-9,10}; 
 
 # focus monitor
 super + {_,shift + }{F1,F2,F3,F4,F5}
-	bspc {desktop -f, node -d} ^{1,2,3,4,5}:focused; \
-	echo "extern\ Desktop" >> ~/.config/bspwm/panel/lb_fifo.tmp
+	bspc {desktop -f, node -d} ^{1,2,3,4,5}:focused;
 
 
 #
