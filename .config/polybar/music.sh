@@ -32,11 +32,11 @@ info)
                 fi
                 zartist=$(playerctl metadata artist)
                 ztitle=$(playerctl metadata title)
-                zscroll -l20 "$artist - $title" &
+                zscroll -l20 -d0.3 "$artist - $title" &
                 pid=$!
             fi
         fi
-        if [ -z "$zartist" ]; then
+        if [ -z "$pid" ]; then
             echo ""
         fi
         sleep 1
