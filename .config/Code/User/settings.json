@@ -12,11 +12,13 @@
   ],
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
-  "latex-workshop.latex.clean.enabled": true,
-  "latex-workshop.latex.clean.args": [
-    "-c",
-    "%TEX%"
-  ],
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  // "latex-workshop.latex.clean.enabled": true,
+  // "latex-workshop.latex.clean.args": [
+  //   "-c",
+  //   "%TEX%"
+  // ],
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bbl",
@@ -26,7 +28,6 @@
     "*.lof",
     "*.lot",
     "*.out",
-    "*.toc",
     "*.acn",
     "*.acr",
     "*.alg",
@@ -45,10 +46,8 @@
     "*.out",
     "*.vrb"
   ],
-  "latex-workshop.view.pdf.invert": "0.88",
+  "latex-workshop.view.pdf.invert": 0.88,
   "latex-workshop.latex.build.forceRecipeUsage": false,
-  "latex-workshop.latex.clean.method": "cleanCommand",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
@@ -57,33 +56,58 @@
   },
   "editor.fontFamily": "'Droid Sans Mono','monospace','Font Awesome 6 Free Solid'",
   "security.workspace.trust.untrustedFiles": "open",
-  // "latex-workshop.latex.recipes": [
-  //   {
-  //     "name": "LuaLaTeX ➞ makeglossaries ➞ LuaLaTeX (2x)",
-  //     "tools": [
-  //       "lualatex",
-  //       "makeglossaries",
-  //       "lualatex",
-  //       "lualatex"
-  //     ]
-  //   }
-  // ],
-  // "latex-workshop.latex.tools": [
-  //   {
-  //     "name": "lualatex",
-  //     "command": "lualatex",
-  //     "args": [
-  //       "-synctex=1",
-  //       "-interaction=nonstopmode",
-  //       "%DOC%"
-  //     ]
-  //   },
-  //   {
-  //     "name": "makeglossaries",
-  //     "command": "makeglossaries",
-  //     "args": [
-  //       "%DOCFILE%"
-  //     ]
-  //   }
-  // ]
+  "git.openRepositoryInParentFolders": "always",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "lualatex-default",
+      "tools": [
+        "lualatex",
+        "lualatex"
+      ]
+    },
+    {
+      "name": "lualatex",
+      "tools": [
+        "lualatex",
+      ]
+    },
+    {
+      "name": "lualatex-makeglossaries-biber",
+      "tools": [
+        "lualatex",
+        "makeglossaries",
+        "biber",
+        "lualatex",
+        "lualatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "makeglossaries",
+      "command": "makeglossaries",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+  ],
+  "latex-workshop.latex.recipe.default": "lastUsed"
 }
