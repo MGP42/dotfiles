@@ -12,13 +12,37 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-		"rightarrow":{
+	"\\rightArrow":{
 		"prefix": "-->",
 		"body": [
 			"\\rightarrow"
 		],
-		},
-		"Vorlesung":{
+	},
+	"\\RightArrow":{
+		"prefix": "==>",
+		"body": [
+			"\\Rightarrow"
+		],
+	},
+	"\\leftArrow":{
+		"prefix": "<--",
+		"body": [
+			"\\leftarrow"
+		],
+	},
+	"\\LeftArrow":{
+		"prefix": "<==",
+		"body": [
+			"\\Leftarrow"
+		],
+	},
+	"\\LeftRightArrow":{
+		"prefix": "<=>",
+		"body": [
+			"\\Leftrightarrow"
+		],
+	},
+	"Vorlesung":{
 		"prefix": "Vorlesung",
 		"body": [
 			"\\documentclass[border=2mm,varwidth]{standalone}",
@@ -35,5 +59,5 @@
 			"",
 			"\\end{document}"
 		],
-		}
+	}
 }
