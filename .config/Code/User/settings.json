@@ -28,6 +28,7 @@
     "*.lof",
     "*.lot",
     "*.out",
+    "*.toc",
     "*.acn",
     "*.acr",
     "*.alg",
@@ -44,7 +45,8 @@
     "*.synctex.gz",
     "*.nav",
     "*.out",
-    "*.vrb"
+    "*.vrb",
+    "*.sty",
   ],
   "latex-workshop.view.pdf.invert": 0.88,
   "latex-workshop.latex.build.forceRecipeUsage": false,
