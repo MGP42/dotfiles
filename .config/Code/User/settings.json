@@ -61,16 +61,22 @@
   "git.openRepositoryInParentFolders": "always",
   "latex-workshop.latex.recipes": [
     {
-      "name": "lualatex-default",
+      "name": "pdflatex",
       "tools": [
-        "lualatex",
-        "lualatex"
+        "pdflatex",
       ]
     },
     {
       "name": "lualatex",
       "tools": [
         "lualatex",
+      ]
+    },
+    {
+      "name": "lualatex-x2",
+      "tools": [
+        "lualatex",
+        "lualatex"
       ]
     },
     {
@@ -88,6 +94,17 @@
     {
       "name": "lualatex",
       "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
