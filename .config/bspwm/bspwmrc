@@ -44,9 +44,11 @@ xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 ###### AUTOSTART
 sxhkd &
-kdeconnect-indicator &
 telegram-desktop & #		# this on especially
 ##################
+
+sleep 5
+kdeconnect-indicator &
 
 
 
