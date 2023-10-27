@@ -21,6 +21,7 @@
 !.config/Code/User/snippets/
 !.config/Code/Users/keybindings.json
 !.config/Code/Users/settings.json
+!.config/qt5ct
 
 .texlive*
 .config/QtProject.conf

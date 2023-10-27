@@ -1,6 +1,8 @@
 # start some nice programs
 # export BROWSER=/usr/bin/chromium
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # SSH-AGENT
 eval $(ssh-agent)
 ssh-add ~/.ssh/github-MGP42

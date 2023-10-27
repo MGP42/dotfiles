@@ -44,11 +44,10 @@ xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 ###### AUTOSTART
 sxhkd &
-telegram-desktop & #		# this on especially
-##################
+telegram-desktop &
+(sleep 5;kdeconnect-indicator)&
 
-sleep 5
-kdeconnect-indicator &
+##################
 
 
 
@@ -59,6 +58,7 @@ compton
 
 ############ Garbage Collector
 
+killall kdeconnect-indicator
 killall telegram-desktop
 killall dropbox
 killall bash
