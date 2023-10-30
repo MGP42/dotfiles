@@ -1,4 +1,4 @@
-path=~/.cache/tinybar.running
+path=/dev/shm/tinybar.$USER.running
 
 if [ -e $path ]
 then
