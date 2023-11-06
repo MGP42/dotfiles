@@ -3,8 +3,8 @@ setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		#Keyboar
 xsetroot -cursor_name left_ptr							#Mouse
 
 ####### KEYRING
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)	#Keyring itself
-export SSH_AUTH_SOCK								#Can't remember is important, has to do with the Keyring
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)	#Keyring itself
+# export SSH_AUTH_SOCK								#Can't remember is important, has to do with the Keyring
 
 ####### Autostart PRE
 # Stuff that can't be loaded late out of whatever reason DO NOT LIKE
@@ -44,6 +44,7 @@ xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 ###### AUTOSTART
 sxhkd &
+poweralertd &
 telegram-desktop &
 (sleep 5;kdeconnect-indicator)&
 

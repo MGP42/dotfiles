@@ -5,9 +5,9 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export TERMINAL=/usr/bin/termite
 
 # SSH-AGENT
-eval $(ssh-agent)
-ssh-add ~/.ssh/github-MGP42
-ssh-add ~/.ssh/gitlab
+#eval $(ssh-agent)
+#ssh-add ~/.ssh/github-MGP42
+#ssh-add ~/.ssh/gitlab
 
 # CLOUD
 syncthing --no-browser &
