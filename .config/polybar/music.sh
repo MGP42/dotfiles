@@ -2,7 +2,8 @@
 case $1 in
 # Controll Elements
 control)
-    if [ -z $(playerctl status 2>/dev/null) ]; then
+    mstat=$(playerctl status -a 2>/dev/null | grep -E "Playing|Paused")
+    if [[ $mstat == "" ]]; then
         echo ""
         exit
     fi
@@ -15,18 +16,21 @@ control)
 # Song Info with zscroll
 info)
     zartist=""
-    ztitle=""
+    ztitle="abc"
     while true; do
-        if [ "$(playerctl status 2>/dev/null)" = "" ] && [ -n "$pid" ]; then
-            kill $pid
-            unset pid
-            unset zartist
-            unset ztitle
+        mstat=$(playerctl status -a 2>/dev/null | grep -E "Playing|Paused")
+        if [[ $mstat == "" ]]; then 
+	    if [ -n "$pid" ]; then
+                kill $pid
+                unset pid
+                unset zartist
+                unset ztitle
+            fi
         fi
-        if [ "$(playerctl status 2>/dev/null)" != "" ]; then
+        if [[ $mstat != "" ]]; then
             artist=$(playerctl metadata artist 2>/dev/null)
             title=$(playerctl metadata title 2>/dev/null)
-            if [ "$title" != "$ztitle" ]; then
+            if [[ "$title" != "$ztitle" ]]; then
                 if [ -n "$pid" ]; then
                     kill $pid
                 fi
@@ -44,14 +48,16 @@ info)
     ;;
 # Separators Left/Right
 sep_left)
-    if [ "$(playerctl status 2>/dev/null)" != "" ]; then
+    mstat=$(playerctl status -a 2>/dev/null | grep -E "Playing|Paused")
+    if [[ $mstat != "" ]]; then
         echo ""
     else
         echo""
     fi
     ;;
 sep_right)
-    if [ "$(playerctl status 2>/dev/null)" != "" ]; then
+    mstat=$(playerctl status -a 2>/dev/null | grep -E "Playing|Paused")
+    if [[ $mstat != "" ]]; then
         echo ""
     else
         echo""
