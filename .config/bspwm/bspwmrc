@@ -2,10 +2,6 @@
 setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		#Keyboard to DE
 xsetroot -cursor_name left_ptr							#Mouse
 
-####### KEYRING
-# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)	#Keyring itself
-# export SSH_AUTH_SOCK								#Can't remember is important, has to do with the Keyring
-
 ####### Autostart PRE
 # Stuff that can't be loaded late out of whatever reason DO NOT LIKE
 nm-applet &		# Applet's broken as fuck anyway. fix it FFS
