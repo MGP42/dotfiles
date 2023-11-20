@@ -134,9 +134,8 @@ alias "cd.."="cd .."
 alias "pacman"="sudo pacman"
 alias "ls-la"="ls -la"
 alias "ls"="ls --color=auto"
-alias "dolphin"="DESKTOP_SESSION=kde dolphin"
-alias "unilpq"='ssh uni "lpq; echo ; lpq -P zarquon"'
 alias "open=xdg-open"
+alias ffs='sudo $(fc -ln  -1)'
 
 # EXPORT ###############################################################
 ########################################################################
