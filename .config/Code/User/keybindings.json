@@ -62,5 +62,15 @@
             "to": "right"
         },
         "when": "editorLangId==latex && !editorHasSelection"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "r.runSource",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-r.runSource",
+        "when": "editorTextFocus && editorLangId == 'r'"
     }
 ]
