@@ -47,6 +47,9 @@
     "*.out",
     "*.vrb",
     "*.sty",
+    "*.bcf",
+    "*.run.xml",
+    "*.ist",
   ],
   "latex-workshop.view.pdf.invert": 0.88,
   "latex-workshop.latex.build.forceRecipeUsage": false,
@@ -84,7 +87,7 @@
       "tools": [
         "lualatex",
         "makeglossaries",
-        "biber",
+        // "biber",
         "lualatex",
         "lualatex"
       ]
@@ -132,4 +135,8 @@
   "chatgpt.lang": "en",
   "r.plot.useHttpgd": true,
   "latex-workshop.synctex.afterBuild.enabled": true,
+  "obsidian-md-vsc.defaultVault": "Test",
+  "obsidian-md-vsc.defaultVaultPath": "/home/dki/Documents/Leibniz FH/Kosten und Leistungsrechnung/Vorlesung/Test/Test",
+  "obsidian-md-vsc.defaultNote": "test",
+  "liveServer.settings.CustomBrowser": "chrome",
 }
