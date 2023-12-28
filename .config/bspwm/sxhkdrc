@@ -7,6 +7,9 @@ XF86Calculator
 XF86AudioRaiseVolume
 	amixer sset Master 650+ unmute; 
 
+XF86AudioMicMute
+	amixer sset Capture toggle;
+
 XF86AudioLowerVolume
 	amixer sset Master 650- unmute;
 
@@ -68,7 +71,7 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {x,y,z}
+super + ctrl + {x,z,c}
 	bspc node -g {locked,sticky,private}
 
 #
