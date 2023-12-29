@@ -4,6 +4,18 @@ zstyle :compinstall filename '/home/dki/.zshrc'
 autoload -Uz compinit
 compinit
 
+# syntax highlighter ###################################################
+########################################################################
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# fuzzy-finder #########################################################
+########################################################################
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # HISTORY ##############################################################
 ########################################################################
 
