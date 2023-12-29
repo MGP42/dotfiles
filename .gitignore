@@ -22,7 +22,7 @@
 !.config/Code/Users/keybindings.json
 !.config/Code/Users/settings.json
 !.config/qt5ct
-
+!.vim*
 .texlive*
 .config/QtProject.conf
 #BUT EXCLUDE SPECIFIC DOTFILES ANYWAY
