@@ -80,10 +80,10 @@ fi
 
 function jobsrunning(){                     #get number of background jons running
 	#echo $(jobs -rp | wc -l)
-	if [ $(jobs -rp | wc -l) -ne 0 ];          #if 0 do not print
+	if [ $#jobstates -ne 0 ];          #if 0 do not print
 	then
 		lnext ${zsh_color[5]} ${zsh_color[6]}
-		echo $zsh_spacer $(jobs -rp | wc -l)
+		echo $zsh_spacer $#jobstates
 	fi
 }
 
