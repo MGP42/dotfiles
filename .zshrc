@@ -142,6 +142,7 @@ alias "ls-la"="ls -la"
 alias "ls"="ls --color=auto"
 alias "open=xdg-open"
 alias ffs='sudo $(fc -ln  -1)'
+alias nano=vim
 
 # EXPORT ###############################################################
 ########################################################################

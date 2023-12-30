@@ -27,7 +27,7 @@ colors:
 
     # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '#dcdccc'
+    text: '#000000'
     cursor: '#dcdccc'
 
   # Normal colors
@@ -50,7 +50,7 @@ colors:
     blue:    '#81a2be'
     magenta: '#b77ee0'
     cyan:    '#54ced6'
-    white:   '#282a2e'
+    white:   '#eeeeee'
 
 shell:
   program: /bin/zsh
