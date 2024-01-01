@@ -8,11 +8,10 @@ set number
 set linebreak
 set visualbell
 set autoindent
-set smartindent
-set smarttab
 set softtabstop=4
+set shiftwidth=4
 set ruler
 
 map <C-b> :NERDTreeToggle<CR>
 set laststatus=2
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)
