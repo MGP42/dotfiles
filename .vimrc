@@ -9,6 +9,7 @@ set linebreak
 set visualbell
 set autoindent
 set softtabstop=4
+set tabstop=4
 set shiftwidth=4
 set ruler
 
