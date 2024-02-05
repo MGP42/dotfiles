@@ -8,7 +8,7 @@ nm-applet &		# Applet's broken as fuck anyway. fix it FFS
 #######
 
 ####### BSPCWM implementation
-bspc monitor -d I II III IV V VI VII VIII IX X
+bash ~/.config/bspwm/scripts/monitor.sh
 
 bspc config border_width         3
 bspc config window_gap           0
