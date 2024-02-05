@@ -5,6 +5,7 @@ configuration {
  xoffset: 0;
  yoffset: 0;
  show-icons: false;
+ monitor: -1;
 }
 window {
  width: 100%;
