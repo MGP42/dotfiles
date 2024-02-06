@@ -10,6 +10,8 @@ nm-applet &		# Applet's broken as fuck anyway. fix it FFS
 ####### BSPCWM implementation
 bash ~/.config/bspwm/scripts/monitor.sh
 
+bspc config presel_feedback_color "#202020"
+
 bspc config border_width         3
 bspc config window_gap           0
 bspc config focused_border_color \#55C2ED

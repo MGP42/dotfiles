@@ -1,0 +1,22 @@
+[Desktop Entry]
+DefaultProfile=default.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1920x1200 screen: Height=1177
+1920x1200 screen: Width=1914
+1920x1200 screen: XPosition=3
+1920x1200 screen: YPosition=20
+2 screens: Height=706
+2 screens: Width=634
+2 screens: XPosition=3843
+2 screens: YPosition=731
+DP-1 DP-3=DP-3
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAXkBAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABEQEAAAMAAAJ6AAAClAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAATT/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+
+[UiSettings]
+ColorScheme=
