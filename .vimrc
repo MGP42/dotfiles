@@ -14,5 +14,7 @@ set shiftwidth=4
 set ruler
 
 map <C-b> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)
