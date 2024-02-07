@@ -41,6 +41,7 @@ xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 
 ###### AUTOSTART
+dunst &
 sxhkd &
 poweralertd &
 telegram-desktop -startintray &
