@@ -2,20 +2,21 @@ path=/dev/shm/tinybar.$USER.running
 
 if [ -e $path ]
 then
-  pid=$(head -n 1 $path)
-  type=$(sed -n '2p' $path)
-  kill $pid
+	type=$(head -n 1 $path)
+	for id in $(tail +2 $path)
+	do
+		kill $id
+	done
 fi
 
-echo $type
-echo $1
-echo ""
 if [ $1 == $type ] || [ $1 == 'kill' ]
 then
   rm $path
 else
-  echo start
-  polybar -c ~/.config/polybar/tinybar.ini $1 &
-  echo $! > $path
-  echo $1 >> $path
+	echo $1 > $path
+	for m in $(polybar --list-monitors | cut -d":" -f1)
+	do
+		MONITOR=$m polybar -c ~/.config/polybar/tinybar.ini $1 &
+		echo $! >> $path
+	done
 fi
