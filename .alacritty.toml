@@ -1,5 +1,5 @@
 [colors.bright]
-black = "#666666"
+black = "#1f1f1f"
 blue = "#81a2be"
 cyan = "#54ced6"
 green = "#9ec400"
@@ -13,7 +13,7 @@ cursor = "#dcdccc"
 text = "#000000"
 
 [colors.normal]
-black = "#3f3f3f"
+black = "#060606"
 blue = "#506070"
 cyan = "#8cd0d3"
 green = "#60b48a"
