@@ -27,14 +27,14 @@ i3lock\
 		--time-size=$((size*4))\
 		--time-pos="ix:iy-$((space*3))"\
 		--timeoutline-color=$color_outline\
-		--timeoutline-width=$((outline_width*3)) \
+		--timeoutline-width=$outline_width \
 	`#DATE SETTINGS`\
 		--date-str="%a %d %B"\
 		--date-color=$color\
 		--date-size=$((size*2))\
 		--date-pos="ix:iy+$((space*3))"\
 		--dateoutline-color=$color_outline\
-		--dateoutline-width=$((outline_width*2))\
+		--dateoutline-width=$outline_width\
 	`#WRONMG SETTINGS`\
 		--wrong-color=$color_alert\
 		--wrong-size=$((size*2))\
