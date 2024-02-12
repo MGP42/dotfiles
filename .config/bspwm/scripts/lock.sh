@@ -30,7 +30,7 @@ i3lock\
 		--timeoutline-color=$color_outline\
 		--timeoutline-width=$outline_width \
 	`#DATE SETTINGS`\
-		--date-str="%a %d %B"\
+		--date-str="%a %d. %B"\
 		--date-color=$color\
 		--date-size=$((size*2))\
 		--date-pos="x+$space:y+$((size*6+space*1))"\
