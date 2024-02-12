@@ -25,14 +25,16 @@ i3lock\
 	`#TIME SETTINGS`\
 		--time-color=$color\
 		--time-size=$((size*4))\
-		--time-pos="ix:iy-$((space*3))"\
+		--time-pos="x+$space:y+$((size*4))"\
+		--time-align=1\
 		--timeoutline-color=$color_outline\
 		--timeoutline-width=$outline_width \
 	`#DATE SETTINGS`\
 		--date-str="%a %d %B"\
 		--date-color=$color\
 		--date-size=$((size*2))\
-		--date-pos="ix:iy+$((space*3))"\
+		--date-pos="x+$space:y+$((size*6+space*1))"\
+		--date-align=1\
 		--dateoutline-color=$color_outline\
 		--dateoutline-width=$outline_width\
 	`#WRONMG SETTINGS`\
@@ -55,6 +57,7 @@ i3lock\
 	`#BAR SETTINGS`\
 		--bar-indicator \
 		--bar-color=00000000\
+		--bar-pos="x:y"\
 		--ringver-color=$color$transparency\
 		--ringwrong-color=$color_alert$transparency\
 		--bshl-color=$(echo $color | fold -w2 | while read -r hex; do printf "%02d" "$(( 0x$hex / 8 ))"; done | tr -d '\n'; echo)\
