@@ -98,10 +98,10 @@
       "name": "lualatex",
       "command": "lualatex",
       "args": [
-        "-synctex=1",
+        // "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-pdf",
+        // "-pdf",
         "%DOC%"
       ]
     },
@@ -120,6 +120,7 @@
       "name": "makeglossaries",
       "command": "makeglossaries",
       "args": [
+        "-d%DIR%",
         "%DOCFILE%"
       ]
     },
