@@ -3,7 +3,7 @@
 
 include "/home/dki/.gtkrc-2.0.mine"
 gtk-theme-name="Breeze-Dark"
-gtk-icon-theme-name="breeze-dark"
+gtk-icon-theme-name="Suru++-Asprómauros"
 gtk-font-name="Font Awesome 5 Brands 11"
 gtk-cursor-theme-name="breeze_cursors"
 gtk-cursor-theme-size=0
