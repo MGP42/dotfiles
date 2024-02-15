@@ -12,6 +12,10 @@
 ## Main
 ![](../../.git-md-img/polybar.jpg)
 
+### audio (speaker/microphone)
+leftclick to toogle<br>
+scrolling to increase/decrease volume
+
 ### audioplayer
 the audioplayer module is only active when there is an active audio player<br>
 the audioplayer uses playerctl to detect and interact with audios<br>
@@ -25,6 +29,12 @@ yes this includes browser*
 
 ### battery 
 left click on module to open tinybar in battery mode
+
+### brightness
+left click to redshift<br>
+middle click to blue shift<br>
+right click to normalize<br>
+scrolling to increase/decrease brightness
 
 ### cpu
 left click on module to open tinybar in cpu mode<br>
@@ -46,6 +56,7 @@ left click on desktop to switch to desktop
 Tinybar is a helper bar to act as a temporary bar below the main bar providing data that wouldn't fit otherwise
 
 right click will always close the bar
+trying to open the already open bar will close it as well
 
 ### battery
 ![](../../.git-md-img/tinybar_battery.jpg)
