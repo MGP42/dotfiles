@@ -14,6 +14,8 @@ set shiftwidth=4
 set ruler
 set showcmd
 
+filetype plugin on
+
 map <C-b> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
