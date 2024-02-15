@@ -32,6 +32,8 @@
 !.vim*
 .texlive*
 .config/QtProject.conf
+
+!.git-md-img/
 #BUT EXCLUDE SPECIFIC DOTFILES ANYWAY
 *history*
 *.log
