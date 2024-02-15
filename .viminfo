@@ -1,0 +1,62 @@
+# Diese viminfo-Datei wurde von Vim 9.0 generiert.
+# Sie können sie verändern, wenn Sie vorsichtig vorgehen!
+
+# Viminfo version
+|1,4
+
+# Wert von 'encoding', als diese Datei geschrieben wurde
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Befehlszeile Geschichte (neueste bis älteste):
+:q!
+|2,0,1707989841,,"q!"
+:q
+|2,0,1707989840,,"q"
+:source .vim/markdown.vim
+|2,0,1707989804,,"source .vim/markdown.vim"
+:source .vim/
+|2,0,1707989782,,"source .vim/"
+
+# Suchausdruck Geschichte (neueste bis älteste):
+
+# Ausdruck Geschichte (neueste bis älteste):
+
+# Eingabe-Zeile Geschichte (neueste bis älteste):
+
+# Debug-Zeile Geschichte (neueste bis älteste):
+
+# Register:
+
+# Datei-Markierungen:
+'0  7  0  ~/123.md
+|4,48,7,0,1707989841,"~/123.md"
+'1  23  0  ~/123.md
+|4,49,23,0,1707989821,"~/123.md"
+'2  17  0  ~/123.md
+|4,50,17,0,1707989821,"~/123.md"
+
+# Jumplist (neueste zuerst):
+-'  7  0  ~/123.md
+|4,39,7,0,1707989841,"~/123.md"
+-'  1  0  ~/123.md
+|4,39,1,0,1707989836,"~/123.md"
+-'  23  0  ~/123.md
+|4,39,23,0,1707989821,"~/123.md"
+-'  17  0  ~/123.md
+|4,39,17,0,1707989821,"~/123.md"
+-'  1  0  ~/123.md
+|4,39,1,0,1707989705,"~/123.md"
+
+# Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/123.md
+	*	1707989840	0
+	"	7	0
+	^	7	0
+	.	6	4
+	+	18	10
+	+	23	0
+	+	6	4
