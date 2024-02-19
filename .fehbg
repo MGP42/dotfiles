@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/data/__shared/Bilder/Wallpaper/Pokemon/Gengar - blue.jpg' 
+feh --no-fehbg --bg-fill '/home/dki/Bilder/.tmp/desktop_bg.png' 

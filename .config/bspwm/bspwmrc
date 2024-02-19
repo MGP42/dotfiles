@@ -21,6 +21,7 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a thunderbird desktop=^10
+bspc rule -a feh state=pseudo_tiled
 
 bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
