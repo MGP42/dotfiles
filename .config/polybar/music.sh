@@ -8,7 +8,7 @@ control)
         exit
     fi
     if [ $(playerctl status) == 'Playing' ]; then
-        echo "%{A:playerctl previous:}%{A}  %{A:playerctl pause:}%{A} %{A:playerctl next:}%{A}"
+        echo "%{A:playerctl previous:}%{A}  %{A:playerctl pause:}%{A}  %{A:playerctl next:}%{A}"
     else
         echo "%{A:playerctl previous:}%{A}  %{A:playerctl play:}%{A} %{A:playerctl next:}%{A}"
     fi
