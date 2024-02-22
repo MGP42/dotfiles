@@ -114,7 +114,11 @@ function gitinfo(){                         #get git info
 
 # PROMPT ###############################################################
 ########################################################################
-
+if [[ "$(tty)" == *"tty"* ]]
+then
+	PROMPT="%{%f%k%}%F"${zsh_color[2]}"%n%f>%F"${zsh_color[4]}"%1~%f> "
+	RPROMPT=$(git symbolic-ref HEAD 2> /dev/null | sed 's/refs\/heads\///')"%f%k"
+else
 		PROMPT="%{%f%k%}%F"${zsh_color[1]}"%K"${zsh_color[2]}$zsh_user 
 		rnext ${zsh_color[3]} ${zsh_color[4]}     #spacer to path
 		PROMPT+=$zsh_spacer" %1~"
@@ -128,10 +132,11 @@ function gitinfo(){                         #get git info
 		zsh_color[16]=''                          #reset tmp old color for reuse on right side
 
 		setopt PROMPT_SUBST           #function calls active
-		RPROMPT+='$(gitinfo)'
+		RPROMPT='$(gitinfo)'
 		RPROMPT+='$(jobsrunning)'
 
 		RPROMPT+=" %f%k"
+fi
 
 # ALIAS ################################################################
 ########################################################################
@@ -147,7 +152,7 @@ alias nano=vim
 # EXPORT ###############################################################
 ########################################################################
 
-export EDITOR=nano
+export EDITOR=vim
 export PATH=~/.local/bin:$PATH
 export TERM=xterm
 
