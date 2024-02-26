@@ -39,7 +39,7 @@ super + Return
 
 # program launcher
 super + space
-	rofi -show #run 
+	rofi -show | cut -d '=' -f2 | tr -d '[:space:]' | xclip -selection clipboard	# rofi, copy math result to clipboard
 	#dmenu_run
 
 # make sxhkd reload its configuration files:

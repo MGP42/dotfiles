@@ -50,6 +50,8 @@ right click on module to open tinybar in top mode<br>
 middle click to open htop sorted by ram<br>
 
 ### worskapces
+left click on Monitor to trigger the monitor setup script from bspwm (useful when connecting to another monitor)<br>
+right click on Monitor to kill polybar and run the start script again (useful when connecting to another monitor)<br>
 left click on desktop to switch to desktop
 
 ## Tinybar
