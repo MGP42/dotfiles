@@ -23,6 +23,9 @@ configuration {
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
 	dpi:						100;
+	
+	kb-mode-next:				"Control+Tab,Super+Tab";
+	kb-mode-previous:			"Control+ISO_Left_Tab,Super+ISO_Left_Tab";
 }
 
 /* ---- Window ---- */
