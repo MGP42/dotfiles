@@ -51,7 +51,7 @@ telegram-desktop -startintray &
 
 
 
-compton 
+picom  --experimental-backends --backend glx --animations --animation-for-open-window none --vsync 
 
 
 
