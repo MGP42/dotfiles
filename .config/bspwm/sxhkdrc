@@ -86,13 +86,17 @@ super + ctrl + {x,z,c}
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}; 
 
-# focus {@parent, @/}
-super + {_, shift +} p
-	bspc node -f @{parent,/}
+# focus {@parent, @first, @/}
+super + {_, shift +,ctrl +} p
+	bspc node -f @{parent,first,/}
 
 # rotate the node 90 degree {left, right}
 super + {u,o}
 	bspc node -R {270,90}
+
+# balance/equalize nodes
+super + {_,shift +} h
+	bspc node -{E,B}
 
 # focus the next/previous desktop in the current monitor
 alt + {_,shift + } Tab
