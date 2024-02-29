@@ -20,6 +20,7 @@ outline_width=1
 
 i3lock\
 	`#BACKGROUND`\
+		-c 000000 `#Background Color`\
 		-i $image\
 		-F		`#Fill`\
 	`#TIME SETTINGS`\
