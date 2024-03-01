@@ -7,78 +7,38 @@
 	selected-normal-foreground: #000000;
 }
 
+
 /* ---- Configuration ---- */
 configuration {
-    modi:                       "drun,calc,run,filebrowser";
     font:                       "hack 10";
     show-icons:                 true;
-    display-drun:               "";
-	display-run:                "";
-    display-filebrowser:        "";
-	display-calc:				"";
-	drun-display-format:        "{name}";
-    hover-select:               false;
-    me-select-entry:            "MouseSecondary";
-    me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-	dpi:						100;
-	
-	kb-mode-next:				"Control+Tab,Super+Tab";
-	kb-mode-previous:			"Control+ISO_Left_Tab,Super+ISO_Left_Tab";
 }
 
 /* ---- Window ---- */
 window {
-    width:						100%;
-	height:						33%;
+    width:						380px;
+	height:						calc(100% - 17px);
     x-offset:                   0px;
-    y-offset:                   0px;
+    y-offset:                   17px;
     spacing:                    0px;
-    padding:                    1px;
+    padding:                    0px;
     margin:                     0px; 
-    border:                     0px;
+	border-color:				@active-background;
+    border:                     3 3 3 0;
     cursor:                     "default";
-    location:                   north;
-    anchor:                     north;
+    location:                   northwest; 
+    anchor:						northwest; 
     fullscreen:                 false;
     enabled:                    true;
-    border-radius:              0 0 12 12;
-}
-
-/* ---- Mainbox ---- */
-mainbox {
-    enabled:                    true;
-    orientation:                horizontal;
-	padding:					0px;
-    background-color:           transparent;
-    children:                   [ "mode-switcher", "imagebox" ];
-    border-radius:              0px;
-	spacing:					5px;
+    border-radius:              0 12 12 0;
 }
 
 /* ---- Imagebox ---- */
-imagebox {
+mainbox {
     background-color:           transparent;
     orientation:                vertical;
-    children:                   [ "inputbar",  "listbox"];
-	spacing:					4px;
-}
-
-/* ---- Listbox ---- */
-listbox {
-    spacing:                    0px;
-    orientation:                vertical;
-    children:                   ["message","listview"];
-	padding:					2px;
-    border-radius:              12px;
-    border:                     2px;
-    border-color:               @active-background;
-	background-color:		    transparent;
-}
-
-/* ---- Dummy ---- */
-dummy {
-    background-color:           transparent;
+    children:                   [ "inputbar", "listview" ];
+	spacing:					2px;
 }
 
 /* ---- Inputbar ---- */
@@ -86,11 +46,11 @@ inputbar {
     enabled:                    true;
     text-color:                 @foreground;
     spacing:                    0px;
-    border-radius:              12px;
+    border-radius:              0px;
     border-color:               @foreground;
 	background-color:		    transparent;
     children:                   [ "textbox-prompt-colon","entry" ];
-    border:                     2px;
+    border:                     0 0 3 0;
     border-color:               @active-background;
 }
 
@@ -111,34 +71,6 @@ entry {
     placeholder:                "Search (ctrl tab to choose mode)";
     placeholder-color:          inherit;
 	background-color:			transparent;
-}
-
-/* ---- Mode Switcher ---- */
-mode-switcher{
-	orientation:				vertical;
-    enabled:                    true;
-    spacing:                    6px;
-    background-color:          	transparent;
-    text-color:                 @foreground;
-}
-
-button {
-    padding:					0px 6px 0px 6px;
-    border-radius:				12px;
-	font:						"hack 16";
-    background-color:			transparent;
-    text-color:					inherit;
-    cursor:						pointer;
-    border:						2px;
-    border-color:				@active-background;
-}
-
-button selected {
-    background-color:	        @selected-normal-background;
-    text-color:				    @selected-normal-foreground;
-    border:						2px;
-    border-color:				@active-background;
-	
 }
 
 /* ---- Listview ---- */
@@ -166,7 +98,7 @@ element {
     padding:                    2px;
     margin:                     0px;
     cursor:                     pointer;
-    background-color:         	transparent;
+    background-color:           transparent;
     border-radius:              12px;
     border:                     0px;
 }

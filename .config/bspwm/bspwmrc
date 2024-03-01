@@ -2,11 +2,6 @@
 setxkbmap -option grp:alt_shift_toggle -layout de -variant ,phonetic &		#Keyboard to DE
 xsetroot -cursor_name left_ptr							#Mouse
 
-####### Autostart PRE
-# Stuff that can't be loaded late out of whatever reason DO NOT LIKE
-nm-applet &		# Applet's broken as fuck anyway. fix it FFS
-#######
-
 ####### BSPCWM implementation
 bash ~/.config/bspwm/scripts/monitor.sh
 
@@ -64,5 +59,4 @@ killall kdeconnect-indicator
 killall telegram-desktop
 killall dropbox
 killall bash
-killall nm-applet
 
