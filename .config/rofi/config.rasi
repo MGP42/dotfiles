@@ -1,6 +1,6 @@
 /* ---- Colors ---- */
 * {
-	background:					#000000;
+	background:					#000000D0;
 	foreground:					#ffffff;
 	active-background:			#55C2ED;
 	selected-normal-background:	#55C2ED;
@@ -73,7 +73,7 @@ listbox {
     border-radius:              12px;
     border:                     2px;
     border-color:               @active-background;
-	background-color:		    @background;
+	background-color:		    transparent;
 }
 
 /* ---- Dummy ---- */
@@ -88,7 +88,7 @@ inputbar {
     spacing:                    10px;
     border-radius:              12px;
     border-color:               @foreground;
-	background-color:		    @background;
+	background-color:		    transparent;
     children:                   [ "textbox-prompt-colon","entry" ];
     border:                     2px;
     border-color:               @active-background;
@@ -126,7 +126,7 @@ button {
     padding:					0px 6px 0px 6px;
     border-radius:				12px;
 	font:						"hack 16";
-    background-color:			@background;
+    background-color:			transparent;
     text-color:					inherit;
     cursor:						pointer;
     border:						2px;
@@ -233,7 +233,7 @@ element-text {
 
 /*****----- Message -----*****/
 message {
-    background-color:           @background;
+    background-color:           transparent;
     margin:						0px 0px 0px 0px;
     border-radius: 				12px;
 	border:						0 0 2 0;
@@ -242,13 +242,13 @@ message {
 
 textbox {
     padding:                    0 0 0 22;
-    background-color:      		@background;
+    background-color:      		transparent;
     text-color:                 @foreground;
 }
 
 error-message {
     padding:                    0px;
     border-radius:				0px;
-    background-color:      		@background;
+    background-color:      		transparent;
     text-color:                 @foreground;
 }
