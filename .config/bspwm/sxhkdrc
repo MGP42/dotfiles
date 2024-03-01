@@ -106,6 +106,10 @@ alt + {_,shift + } Tab
 super + {grave,Tab}
 	bspc {node,desktop} -f last; 
 
+super + shift + Tab
+	bspc node -d last
+
+
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} "$(bspc query -m -M)":^{1-9,10}; 
