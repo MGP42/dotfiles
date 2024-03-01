@@ -49,18 +49,18 @@ window {
 /* ---- Mainbox ---- */
 mainbox {
     enabled:                    true;
-    orientation:                vertical;
+    orientation:                horizontal;
 	padding:					0px;
     background-color:           transparent;
-    children:                   [ "inputbar", "imagebox" ];
+    children:                   [ "mode-switcher", "imagebox" ];
     border-radius:              0px;
 }
 
 /* ---- Imagebox ---- */
 imagebox {
     background-color:           transparent;
-    orientation:                horizontal;
-    children:                   [ "mode-switcher",  "listbox"];
+    orientation:                vertical;
+    children:                   [ "inputbar",  "listbox"];
 	spacing:					4px;
 }
 
@@ -85,7 +85,7 @@ dummy {
 inputbar {
     enabled:                    true;
     text-color:                 @foreground;
-    spacing:                    10px;
+    spacing:                    0px;
     border-radius:              12px;
     border-color:               @foreground;
 	background-color:		    transparent;
@@ -98,7 +98,7 @@ textbox-prompt-colon {
     enabled:                    true;
 	padding:					6px 0px 6px 10px;
     expand:                     false;
-    str:                        "   ";
+    str:                        "";
     text-color:                 inherit;
 	background-color:			transparent;
 }
