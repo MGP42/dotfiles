@@ -114,6 +114,10 @@ super + shift + Tab
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} "$(bspc query -m -M)":^{1-9,10}; 
 
+# send and follow to the given desktop
+super + alt + {1-9,0}
+	bspc node -d "$(bspc query -m -M)":^{1-9,10} --follow;
+
 # focus monitor
 super + {_,shift + }{F1,F2,F3,F4,F5}
 	bspc {desktop -f, node -d} ^{1,2,3,4,5}:focused;
