@@ -28,6 +28,15 @@
         "when": "editorLangId==latex"
     },
     {
+        "key": "shift+enter",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "\\\\par\n",
+            "to": "right"
+        },
+        "when": "editorLangId==latex"
+    },
+    {
         "key": "ctrl+shift+b",
         "command": "editor.action.insertSnippet",
         "args": {
