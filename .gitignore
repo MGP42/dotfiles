@@ -1,1 +1,6 @@
-*
+/*
+
+# BSPWM
+!.config
+.config/*
+!.config/bspwm
