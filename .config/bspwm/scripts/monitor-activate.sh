@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# List all disconnected monitors
+disconnected_monitors=$(xrandr | grep "disconnected" | cut -d' ' -f1)
+
+# deactivate disconnected monitors
+for monitor in $disconnected_monitors; do
+	echo $monitor
+	xrandr --output $monitor --off
+done
+
 # List all active monitors
 active_monitors=$(xrandr | grep " connected " | grep -v "connected (" | cut -d' ' -f1)
 
