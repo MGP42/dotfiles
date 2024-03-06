@@ -44,19 +44,6 @@ poweralertd &
 telegram-desktop -startintray &
 (sleep 5;kdeconnect-indicator)&
 
-##################
-
-
-
+###### COMPOSITOR
 picom  --experimental-backends
-
-
-
-
-############ Garbage Collector
-
-killall kdeconnect-indicator
-killall telegram-desktop
-killall dropbox
-killall bash
 
