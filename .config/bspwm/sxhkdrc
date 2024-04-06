@@ -86,9 +86,12 @@ super + ctrl + {x,z,c}
 super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}; 
 
-# focus {@parent, @first, @/}
-super + {_, shift +,ctrl +} p
-	bspc node -f @{parent,first,/}
+# focus {@parent, @first, @second, @/}
+super + {_,ctrl +} p
+	bspc node -f @{parent,/}
+super + ctrl + {u,o}
+	bspc node -f @{first,second}
+
 
 # rotate the node 90 degree {left, right}
 super + {u,o}

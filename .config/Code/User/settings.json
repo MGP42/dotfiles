@@ -40,9 +40,9 @@
     "*.fdb_latexmk",
     "*.snm",
     "*.synctex(busy)",
-    "*.synctex",
+    // "*.synctex",
     "*.synctex.gz(busy)",
-    "*.synctex.gz",
+    // "*.synctex.gz",
     "*.nav",
     "*.out",
     "*.vrb",
@@ -98,10 +98,10 @@
       "name": "lualatex",
       "command": "lualatex",
       "args": [
-        // "-synctex=1",
+        "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        // "-pdf",
+        "-pdf",
         "%DOC%"
       ]
     },
@@ -133,11 +133,6 @@
     },
   ],
   "latex-workshop.latex.recipe.default": "lastUsed",
-  "chatgpt.lang": "en",
   "r.plot.useHttpgd": true,
-  "latex-workshop.synctex.afterBuild.enabled": true,
-  "obsidian-md-vsc.defaultVault": "Test",
-  "obsidian-md-vsc.defaultVaultPath": "/home/dki/Documents/Leibniz FH/Kosten und Leistungsrechnung/Vorlesung/Test/Test",
-  "obsidian-md-vsc.defaultNote": "test",
   "liveServer.settings.CustomBrowser": "chrome",
 }
