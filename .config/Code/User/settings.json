@@ -87,7 +87,7 @@
       "tools": [
         "lualatex",
         "makeglossaries",
-        // "biber",
+        "biber",
         "lualatex",
         "lualatex"
       ]
