@@ -170,8 +170,13 @@ ctrl + alt + l
 # Programms
 #
 
-# Keepass
+# Flameshot
+# rectangle, screen, screen to clipboard
+{super,ctrl,shift} + Print
+	flameshot {gui,screen,screen -c}
 
+
+# Keepass
 ctrl + alt + k
 	keepassxc
 
