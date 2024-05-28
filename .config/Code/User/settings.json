@@ -135,4 +135,5 @@
   "latex-workshop.latex.recipe.default": "lastUsed",
   "r.plot.useHttpgd": true,
   "liveServer.settings.CustomBrowser": "chrome",
+  "github.copilot.editor.enableAutoCompletions": true,
 }
