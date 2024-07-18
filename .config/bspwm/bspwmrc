@@ -43,6 +43,7 @@ sxhkd &
 poweralertd &
 telegram-desktop -startintray &
 (sleep 5;kdeconnect-indicator)&
+XDG_MENU_PREFIX=arch- kbuildsycoca6					#dolphin mime fix
 
 ###### COMPOSITOR
 picom  --experimental-backends
