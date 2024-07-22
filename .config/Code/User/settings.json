@@ -12,6 +12,7 @@
   ],
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
+  "editor.selectionClipboard": false,
   "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   // "latex-workshop.latex.clean.enabled": true,
