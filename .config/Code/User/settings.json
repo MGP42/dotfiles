@@ -8,7 +8,8 @@
     "**/readme.md",
     "**/README.md",
     "**/*.txt",
-    "**/*.tex"
+    "**/*.tex",
+    "**/*.md",
   ],
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
