@@ -20,8 +20,9 @@ info)
     while true; do
         mstat=$(playerctl status -a 2>/dev/null | grep -E "Playing|Paused")
         if [[ $mstat == "" ]]; then 
-	    if [ -n "$pid" ]; then
+		    if [ -n "$pid" ]; then
                 kill $pid
+				killall playerctl
                 unset pid
                 unset zartist
                 unset ztitle
@@ -33,6 +34,7 @@ info)
             if [[ "$title" != "$ztitle" ]]; then
                 if [ -n "$pid" ]; then
                     kill $pid
+					killall playerctl
                 fi
                 zartist=$(playerctl metadata artist)
                 ztitle=$(playerctl metadata title)
