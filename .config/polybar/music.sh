@@ -7,7 +7,7 @@ control)
         echo ""
         exit
     fi
-    if [[ $(playerctl status -a | tr  -d '\n') == *'Playing'* ]]; then
+    if [[ $(playerctl status -a 2> /dev/null | tr  -d '\n') == *'Playing'* ]]; then
         echo "%{A:playerctl previous:}%{A}  %{A:playerctl pause:}%{A}  %{A:playerctl next:}%{A}"
     else
         echo "%{A:playerctl previous:}%{A}  %{A:playerctl play:}%{A} %{A:playerctl next:}%{A}"
@@ -34,7 +34,7 @@ info)
             if [[ "$title" != "$ztitle" ]]; then
                 if [ -n "$pid" ]; then
                     kill $pid
-					killall playerctl
+					killall playerctl 2> /dev/null
                 fi
                 zartist=$(playerctl metadata artist)
                 ztitle=$(playerctl metadata title)
