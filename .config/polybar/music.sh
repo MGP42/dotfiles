@@ -31,14 +31,14 @@ info)
         if [[ $mstat != "" ]]; then
             artist=$(playerctl metadata artist 2>/dev/null)
             title=$(playerctl metadata title 2>/dev/null)
-            if [[ "$title" != "$ztitle" ]]; then
+            if [[ "$title" != "$ztitle" ]] || [[ "$artist" != $zartist ]]; then
                 if [ -n "$pid" ]; then
                     kill $pid
 					killall playerctl 2> /dev/null
                 fi
                 zartist=$(playerctl metadata artist)
                 ztitle=$(playerctl metadata title)
-                zscroll -l20 -d0.3 "$artist - $title" &
+                zscroll -l20 -d0.3 "$zartist - $ztitle" &
                 pid=$!
             fi
         fi
