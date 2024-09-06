@@ -52,6 +52,8 @@
     "*.bcf",
     "*.run.xml",
     "*.ist",
+    "*-blx.bib",
+    "*.glsdefs",
   ],
   "latex-workshop.view.pdf.invert": 0.88,
   "latex-workshop.latex.build.forceRecipeUsage": false,
