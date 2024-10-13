@@ -95,6 +95,15 @@
         "lualatex",
         "lualatex"
       ]
+    },
+    {
+      "name": "lualatex-biber",
+      "tools": [
+        "lualatex",
+        "biber",
+        "lualatex",
+        "lualatex"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
