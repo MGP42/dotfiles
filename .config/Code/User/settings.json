@@ -23,6 +23,7 @@
   // ],
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
+    "*/*.aux",
     "*.bbl",
     "*.blg",
     "*.idx",
