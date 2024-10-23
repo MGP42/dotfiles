@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fetch data from ipinfo.io
-result=$(wget -qO- ipinfo.io/ip)
+result=$(curl -s ipinfo.io/ip)
 
 # Check if the result contains only one line
 if [ $(echo "$result" | wc -l) -eq 1 ]; then
