@@ -45,8 +45,10 @@ style = "Italic"
 family = "monospace"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
 opacity = 0.72
+
+[terminal]
