@@ -16,6 +16,7 @@
   "editor.selectionClipboard": false,
   "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.autoBuild.run": "onSave",
   // "latex-workshop.latex.clean.enabled": true,
   // "latex-workshop.latex.clean.args": [
   //   "-c",
