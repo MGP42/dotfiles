@@ -46,5 +46,5 @@ telegram-desktop -startintray &
 XDG_MENU_PREFIX=arch- kbuildsycoca6					#dolphin mime fix
 
 ###### COMPOSITOR
-picom  --experimental-backends
+picom & 
 
