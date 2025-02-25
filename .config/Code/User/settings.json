@@ -151,6 +151,7 @@
   "r.plot.useHttpgd": true,
   "liveServer.settings.CustomBrowser": "chrome",
   "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Wal Bordered",
   "markdown-pdf.margin.bottom": "2cm",
   "markdown-pdf.margin.right": "2cm",
   "markdown-pdf.margin.left": "2.5cm",
