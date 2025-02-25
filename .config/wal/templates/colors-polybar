@@ -1,0 +1,13 @@
+background = #e1{background.strip}
+foreground = {foreground}
+
+
+main1_fg = {foreground}
+info1_fg = {foreground}
+info2_fg = {foreground}
+
+main1_bg = {color5}
+info1_bg = {color1}
+info2_bg = {color2}
+
+tray_bg = {background}
