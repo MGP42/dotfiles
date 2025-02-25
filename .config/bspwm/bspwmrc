@@ -4,8 +4,7 @@ xsetroot -cursor_name left_ptr							#Mouse
 
 ####### BSPCWM implementation
 bash ~/.config/bspwm/scripts/monitor.sh
-bash ~/.config/bspwm/bspwm-colors.sh
-
+wal --theme .cache/wal/colors.json 
 
 bspc config pointer_follows_monitor		true;
 
@@ -32,7 +31,6 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 
 
 ##### System Stuff
 bash ~/.config/bspwm/scripts/polybar_launch.sh &			#Info Bar
-feh --bg-fill ~/Bilder/.tmp/desktop_bg.png &			#Wallpaper
 xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 

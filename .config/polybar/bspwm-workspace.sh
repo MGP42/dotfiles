@@ -24,7 +24,7 @@ desktops() {
         if ($0 == active)
             printf "%s%s%s ", active_start, $0, active_end;
         else
-            printf "%s ", $0
+            printf " %s ", $0
     }
     END {
         print end
