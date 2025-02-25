@@ -1,12 +1,4 @@
-/* ---- Colors ---- */
-* {
-	background:					#000000D0;
-	foreground:					#ffffff;
-	active-background:			#55C2ED;
-	selected-normal-background:	#55C2ED;
-	selected-normal-foreground: #000000;
-}
-
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 /* ---- Configuration ---- */
 configuration {
