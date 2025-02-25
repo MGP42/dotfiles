@@ -144,7 +144,7 @@ fi
 alias "cd.."="cd .."
 alias "pacman"="sudo pacman"
 alias "ls-la"="ls -la"
-alias "ls"="ls --color=auto"
+alias "ls"="ls -h --color=auto"
 alias "open=xdg-open"
 alias ffs='sudo $(fc -ln  -1)'
 alias nano=vim
