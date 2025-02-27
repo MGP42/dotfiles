@@ -10,10 +10,18 @@ end="\%\{F$color_inactive\}\%\{B$background\}$symbol\%\{F$foreground\}"
 active_start="\%\{F$color_inactive\}\%\{B$color_active\}$symbol\%\{F$foreground\} "
 active_end=" \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
 desktops() {
+		all=$(bspc query -D --names)
     active=$(bspc query -D -d focused --names)
-    occupied=$(bspc query -D -d .occupied --names)
+		occupied=$(bspc query -D -d .occupied --names)
+		out=""
 
-    echo -e "$occupied\n$active" | sort -u | awk -v active="$active" \
+		for desktop in $all; do
+        if echo "$active $occupied" | grep -qw "$desktop"; then
+            out="$out\n$desktop"
+        fi
+    done
+
+		echo -e "$out"  | awk -v active="$active" \
         -v active_start="$active_start" \
         -v active_end="$active_end" \
         -v start="$start" \
@@ -35,4 +43,3 @@ desktops
 bspc subscribe desktop | while read -r _; do
     desktops
 done
-
