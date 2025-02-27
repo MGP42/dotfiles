@@ -8,7 +8,7 @@ color_inactive=$color2
 monitor=$(bspc query -M -m --names)
 monitor="%{A1:bash ~/.config/bspwm/scripts/monitor-activate.sh:}%{A2:bash ~/.config/bspwm/         scripts/monitor.sh:}%{A3:bash ~/.config/bspwm/scripts/polybar_launch.sh:}$monitor%{A}%{A}%{A}"
 
-monitor="\%\{F$background\}\%\{B$color_active\}$symbol\%\{F$foreground\} $monitor \%\{F$color_active\}\%\{B$color_inactive\}$symbol"
+monitor="\%\{F$background\}\%\{B$color_active\}$symbol\%\{F$foreground\} $monitor \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
 
 start="\%\{F$background\}\%\{B$color_inactive\}$symbol\%\{F$foreground\} "
 end="\%\{F$color_inactive\}\%\{B$background\}$symbol\%\{F$foreground\}"
@@ -37,8 +37,8 @@ desktops() {
         printf "%s", monitor
     }{
         if ($0 == active)
-            printf "%s %s%s ", active_start, $0, active_end;
-        else
+            printf "%s%s%s", active_start, $0, active_end;
+				else if ($0!="")
             printf " %s ", $0
     }
     END {
