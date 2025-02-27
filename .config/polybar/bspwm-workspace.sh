@@ -1,5 +1,5 @@
 symbol=$1
-symbol=""
+#symbol=""
 source ~/.cache/wal/colors.sh
 
 color_active=$color5
