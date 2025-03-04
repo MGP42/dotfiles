@@ -155,4 +155,5 @@
   "markdown-pdf.margin.bottom": "2cm",
   "markdown-pdf.margin.right": "2cm",
   "markdown-pdf.margin.left": "2.5cm",
+  "ltex.additionalRules.languageModel": "de-DE",
 }
