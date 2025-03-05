@@ -23,4 +23,8 @@ ethernet-mac)
 ethernet-ipv6)
     ip -6 addr | grep $eth -A 20 | grep fe80 -B2 | grep inet6 -m1 | xargs | cut -d " " -f 2 | cut -d "/" -f 1 | tr -d '\n' | xclip -selection clipboard
     ;;
+gateway)
+		ip route | grep default | awk '{print $3}' | xclip -selection clipboard
+		notify-send public "gateway copied"
+		;;
 esac

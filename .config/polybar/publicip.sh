@@ -5,7 +5,7 @@ result=$(curl -s ipinfo.io/ip)
 
 # Check if the result contains only one line
 if [ $(echo "$result" | wc -l) -eq 1 ]; then
-    echo "%{A1:bash ~/.config/polybar/clipboard.sh public-ipv4:}$result%{A}"
+    echo " %{A1:bash ~/.config/polybar/clipboard.sh public-ipv4:}$result%{A}"
 else
     # Extract all web addresses using grep and sed
 	addresses=$(echo "$result" | grep -oP '(https?://[^\s<"]+)' | sed "s/:/'\\\\:'/g")
@@ -16,6 +16,6 @@ else
     done)
 
     # Output formatted result
-    echo "$formatted"
+    echo " $formatted"
 fi
 
