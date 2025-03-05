@@ -149,6 +149,7 @@ alias "ls"="ls --color=auto"
 alias "open=xdg-open"
 alias ffs='sudo $(fc -ln  -1)'
 alias nano=vim
+alias wall="wal -o .config/wal/finalize.sh"
 
 # EXPORT ###############################################################
 ########################################################################

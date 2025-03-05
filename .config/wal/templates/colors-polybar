@@ -6,8 +6,8 @@ main1_fg = {foreground}
 info1_fg = {foreground}
 info2_fg = {foreground}
 
-main1_bg = {color5}
+main1_bg = {color2}
 info1_bg = {color1}
-info2_bg = {color2}
+info2_bg = {color3}
 
 tray_bg = {background}
