@@ -39,7 +39,7 @@ desktops() {
         if ($0 == active)
             printf "%s%s%s", active_start, $0, active_end;
 				else if ($0!="")
-            printf " %s ", $0
+            printf " %s%s%s%s%s ","%{A1:bspc desktop -f ", $0, ":}", $0, "%{A}";
     }
     END {
         print end
