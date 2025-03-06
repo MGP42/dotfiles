@@ -59,7 +59,7 @@ zsh_color=(
     '{white}'           #running jobs background
     '{white}'           #git HEAD not synced foreground
     '{red}'             #git HEAD not synced background
-    '{black}'           #git HEAD synced foreground
+    '{white}'           #git HEAD synced foreground
     '{green}'           #git HEAD synced background
     '{black}'           #ssh foreground
     '{yellow}'          #ssh background
