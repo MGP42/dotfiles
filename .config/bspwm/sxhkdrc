@@ -35,7 +35,7 @@ XF86MonBrightness{Up,Down}
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + space
