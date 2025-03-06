@@ -47,13 +47,14 @@ rnext(){                            #right Arrow spacer
 
 # GLOBAL VARIABLES #####################################################
 ########################################################################
+# Black, Red, Green, Yellow, Blue, Magenta, Cyan, White, Bright Black, Bright Red, Bright Green, Bright Yellow, Bright Blue, Bright Magenta, Bright Cyan, Bright White
 
 local -a zsh_color	#define before initialize BS
 zsh_color=(
     '{white}'           #user foreground
-    '{blue}'            #user background
-    '{black}'           #path foreground
-    '{cyan}'            #path background
+    '{green}'           #user background
+    '{white}'           #path foreground
+    '{red}'             #path background
     '{black}'           #running jobs foreground
     '{white}'           #running jobs background
     '{white}'           #git HEAD not synced foreground
@@ -65,7 +66,7 @@ zsh_color=(
     '{white}'           #root foreground
     '{red}'             #root background
     '{white}'               #old color foreground tmp savestate
-    '{blue}'                #old color background tmp savestate
+    '{green}'                #old color background tmp savestate
 )
 
 local zsh_spacer=''     #tmp spacer save state | cause subroutine global variable change does not work

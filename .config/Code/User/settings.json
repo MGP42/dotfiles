@@ -4,13 +4,6 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "grammarly.files.include": [
-    "**/readme.md",
-    "**/README.md",
-    "**/*.txt",
-    "**/*.tex",
-    "**/*.md",
-  ],
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
   "editor.selectionClipboard": false,
@@ -50,7 +43,7 @@
     "*.nav",
     "*.out",
     "*.vrb",
-    "*.sty",
+    // "*.sty",
     "*.bcf",
     "*.run.xml",
     "*.ist",
@@ -156,4 +149,9 @@
   "markdown-pdf.margin.right": "2cm",
   "markdown-pdf.margin.left": "2.5cm",
   "ltex.additionalRules.languageModel": "de-DE",
+  "[latex]":{
+    "editor.quickSuggestions": {
+      "other": false,
+    },
+  },
 }
