@@ -4,22 +4,27 @@ source ~/.cache/wal/colors.sh
 color_active=$color2
 color_inactive=$color1
 
-monitor=$(bspc query -M -m --names)
-monitor="%{A1:bash ~/.config/bspwm/scripts/monitor-activate.sh:}%{A2:bash ~/.config/bspwm/         scripts/monitor.sh:}%{A3:bash ~/.config/bspwm/scripts/polybar_launch.sh:}$monitor%{A}%{A}%{A}"
+monitor=$(bspc query -M -m $MONITOR --names)
+monitor="%{A1:bash ~/.config/bspwm/scripts/monitor-activate.sh:}%{A2:bash ~/.config/bspwm/scripts/monitor.sh:}%{A3:bash ~/.config/bspwm/scripts/polybar_launch.sh:}$monitor%{A}%{A}%{A}"
 
 monitor="\%\{F$background\}\%\{B$color_active\}$symbol\%\{F$foreground\} $monitor \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
 
-start="\%\{F$background\}\%\{B$color_inactive\}$symbol\%\{F$foreground\} "
+start="\%\{F$background\}\%\{B$color_inactive\}$symbol\%\{F$foreground\} "								# start of the desktop list
+end=" \%\{F$color_inactive\}\%\{B$background\}$symbol\%\{F$foreground\}"									# end of the desktop list
 end="\%\{F$color_inactive\}\%\{B$background\}$symbol\%\{F$foreground\}"
-active_start="\%\{F$color_inactive\}\%\{B$color_active\}$symbol\%\{F$foreground\} "
-active_end=" \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
+active_start="\%\{F$color_inactive\}\%\{B$color_active\}$symbol\%\{F$foreground\} "				# start of the active desktop
+active_end=" \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"					# end of the active desktop
 
-desktops() {
+# get bspwm data per desktop
+getData() {
 		all=$(bspc query -D -m --names)
     active=$(bspc query -D -d focused --names)
 		occupied=$(bspc query -D -m $MONITOR --names -d .occupied )
 		out=""
+}
 
+# return bspwm data
+returnData() {
 		for desktop in $all; do
         if echo "$active $occupied" | grep -qw "$desktop"; then
             out="$out\n$desktop"
@@ -44,8 +49,14 @@ desktops() {
         print end
     }'
 }
+getData
+active=$(bspc query -D -m $MONITOR -d .active --names)		# get active desktop of inactive monitors
+returnData
 
-desktops
 bspc subscribe desktop | while read -r _; do
-    desktops
+		# only update if the monitor is the current monitor
+		if [ $MONITOR == $(bspc query -M -m --names) ]; then
+	    getData
+			returnData
+		fi
 done
