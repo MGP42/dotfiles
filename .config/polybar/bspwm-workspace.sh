@@ -1,8 +1,8 @@
 symbol=$1
-source ~/.cache/wal/colors.sh
+source ~/.cache/wal/colors-polybar
 
-color_active=$color2
-color_inactive=$color1
+color_active=$main1_bg
+color_inactive=$info1_bg
 
 monitor=$(bspc query -M -m $MONITOR --names)
 monitor="%{A1:bash ~/.config/bspwm/scripts/monitor-activate.sh:}%{A2:bash ~/.config/bspwm/scripts/monitor.sh:}%{A3:bash ~/.config/bspwm/scripts/polybar_launch.sh:}$monitor%{A}%{A}%{A}"
