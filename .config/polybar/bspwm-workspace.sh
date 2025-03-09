@@ -3,11 +3,12 @@ source ~/.cache/wal/colors-polybar
 
 color_active=$main1_bg
 color_inactive=$info1_bg
+bgNoAlpha=$(echo $background | cut -c 1,4-)
 
 monitor=$(bspc query -M -m $MONITOR --names)
 monitor="%{A1:bash ~/.config/bspwm/scripts/monitor-activate.sh:}%{A2:bash ~/.config/bspwm/scripts/monitor.sh:}%{A3:bash ~/.config/bspwm/scripts/polybar_launch.sh:}$monitor%{A}%{A}%{A}"
 
-monitor="\%\{F$background\}\%\{B$color_active\}$symbol\%\{F$foreground\} $monitor \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
+monitor="\%\{F$bgNoAlpha\}\%\{B$color_active\}$symbol\%\{F$foreground\} $monitor \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
 
 start="\%\{F$background\}\%\{B$color_inactive\}$symbol\%\{F$foreground\} "								# start of the desktop list
 end=" \%\{F$color_inactive\}\%\{B$background\}$symbol\%\{F$foreground\}"									# end of the desktop list
