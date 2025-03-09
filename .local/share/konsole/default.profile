@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Breeze
+ColorScheme=colors-konsole
 Font=Hack,9,-1,5,50,0,0,0,0,0
 
 [General]
