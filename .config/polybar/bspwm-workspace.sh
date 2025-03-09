@@ -15,9 +15,9 @@ active_start="\%\{F$color_inactive\}\%\{B$color_active\}$symbol\%\{F$foreground\
 active_end=" \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}"
 
 desktops() {
-		all=$(bspc query -D --names)
+		all=$(bspc query -D -m --names)
     active=$(bspc query -D -d focused --names)
-		occupied=$(bspc query -D -d .occupied --names)
+		occupied=$(bspc query -D -m $MONITOR --names -d .occupied )
 		out=""
 
 		for desktop in $all; do
