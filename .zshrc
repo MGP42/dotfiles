@@ -157,7 +157,5 @@ alias wall="wal -o .config/wal/finalize.sh"
 
 export EDITOR=vim
 export PATH=~/.local/bin:$PATH
-export TERM=xterm
-
 
 clear
