@@ -7,3 +7,5 @@ done
 
 ### Set Wallpaper
 bash ~/.fehbg
+
+notify-send Polybar "Polybar reloaded"

@@ -34,3 +34,5 @@ for monitor in $connected_monitors; do
 	xrandr --output $monitor --right-of $most_right_monitor --auto
 	most_right_monitor=$monitor
 done
+
+notify-send Monitors "Updated Monitor configuration"
