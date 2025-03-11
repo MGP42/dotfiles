@@ -8,7 +8,7 @@ color_outline=000000
 color_alert_outline=000000
 
 #Background
-image=~/Bilder/.tmp/lock_bg.png
+image=$(jq -r '.wallpaper' ~/.cache/wal/colors.json)
 
 #BAR
 transparency=78
