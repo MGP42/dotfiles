@@ -5,3 +5,4 @@
 .config/*
 !.config/bspwm
 !.config/polybar
+!.config/wal
