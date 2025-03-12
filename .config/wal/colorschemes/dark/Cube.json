@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/dki/Bilder/Wallpaper/Technik/Cube.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#070417",
+        "foreground": "#c0cfdf",
+        "cursor": "#c0cfdf"
+    },
+    "colors": {
+        "color0": "#070417",
+        "color1": "#4B556F",
+        "color2": "#3A528A",
+        "color3": "#708BAF",
+        "color4": "#576C92",
+        "color5": "#B47950",
+        "color6": "#769BC8",
+        "color7": "#c0cfdf",
+        "color8": "#86909c",
+        "color9": "#4B556F",
+        "color10": "#B47950",
+        "color11": "#3A528A",
+        "color12": "#576C92",
+        "color13": "#708BAF",
+        "color14": "#769BC8",
+        "color15": "#c0cfdf"
+    }
+}
