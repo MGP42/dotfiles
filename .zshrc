@@ -51,21 +51,21 @@ rnext(){                            #right Arrow spacer
 
 local -a zsh_color	#define before initialize BS
 zsh_color=(
-    '{white}'           #user foreground
+    '{brightwhite}'           #user foreground
     '{green}'           #user background
-    '{white}'           #path foreground
+    '{brightwhite}'           #path foreground
     '{red}'             #path background
     '{black}'           #running jobs foreground
-    '{white}'           #running jobs background
-    '{white}'           #git HEAD not synced foreground
+    '{brightwhite}'           #running jobs background
+    '{brightwhite}'           #git HEAD not synced foreground
     '{red}'             #git HEAD not synced background
-    '{white}'           #git HEAD synced foreground
+    '{brightwhite}'           #git HEAD synced foreground
     '{green}'           #git HEAD synced background
     '{black}'           #ssh foreground
-    '{white}'           #ssh background
+    '{brightwhite}'           #ssh background
     '{black}'           #root foreground
     '{white}'           #root background
-    '{white}'               #old color foreground tmp savestate
+    '{brightwhite}'               #old color foreground tmp savestate
     '{green}'               #old color background tmp savestate
 )
 
@@ -150,7 +150,7 @@ alias "ls"="ls --color=auto"
 alias "open=xdg-open"
 alias ffs='sudo $(fc -ln  -1)'
 alias nano=vim
-alias wall="wal -o ~/.config/wal/finalize.sh"
+alias wall="wal -o ~/.config/wal/finalize.sh --cols16"
 
 # EXPORT ###############################################################
 ########################################################################
