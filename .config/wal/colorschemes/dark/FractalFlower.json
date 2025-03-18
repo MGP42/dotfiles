@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/dki/Bilder/Wallpaper/Abstract/Fractal-Wallpaper-133-2560x1440.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#081929",
+        "foreground": "#9ed8d3",
+        "cursor": "#9ed8d3"
+    },
+    "colors": {
+        "color0": "#081929",
+        "color1": "#196A75",
+        "color2": "#60A062",
+        "color3": "#4C7B84",
+        "color4": "#1C7A83",
+        "color5": "#286468",
+        "color6": "#239997",
+        "color7": "#9ed8d3",
+        "color8": "#6e9793",
+        "color9": "#196A75",
+        "color10": "#286468",
+        "color11": "#60A062",
+        "color12": "#1C7A83",
+        "color13": "#4C7B84",
+        "color14": "#239997",
+        "color15": "#9ed8d3"
+    }
+}
