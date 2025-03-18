@@ -29,7 +29,7 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 
 
 
 ##### System Stuff
-bash ~/.config/bspwm/scripts/polybar_launch.sh &			#Info Bar
+bash ~/.config/bspwm/scripts/polybar_launch.sh 			#Info Bar
 xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
 
 
@@ -46,4 +46,4 @@ XDG_MENU_PREFIX=arch- kbuildsycoca6					#dolphin mime fix
 picom & 
 
 ###### THEME
-{sleep 1;wal --theme .cache/wal/colors.json} &
+wal --theme .cache/wal/colors.json 
