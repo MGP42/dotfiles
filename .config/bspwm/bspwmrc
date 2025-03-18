@@ -22,28 +22,30 @@ bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
 
 ##### Mouse / Touchpad
-#xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 3 2	#enable Tapping
 xinput set-prop "ELAN0683:00 04F3:320B Touchpad" "libinput Tapping Enabled" 1
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 1	#enable 2 Finger Scroll (any Direction)
 
 
+if [[ "$1" == 0 ]]; then			#Only run on first start
+####### SYSTEM CONFIGURATION
+	bash ~/.config/bspwm/scripts/polybar_launch.sh 			#Info Bar
+	xss-lock ~/.config/bspwm/scripts/lock.sh &					#Lockscreen after Standby
 
-##### System Stuff
-bash ~/.config/bspwm/scripts/polybar_launch.sh 			#Info Bar
-xss-lock ~/.config/bspwm/scripts/lock.sh &			#Lockscreen after Standby
+####### SYSTEM APPLICATIONS
+	dunst &																							#Notification	
+	sxhkd &																							#Keybindings
+	poweralertd &																				#Poweralert
 
+####### USER APPLICATIONS
+	telegram-desktop -startintray &											#Telegram
+	(sleep 5;kdeconnect-indicator)&											#KDEConnect
+	XDG_MENU_PREFIX=arch- kbuildsycoca6									#dolphin mime fix
 
-
-###### AUTOSTART
-dunst &
-sxhkd &
-poweralertd &
-telegram-desktop -startintray &
-(sleep 5;kdeconnect-indicator)&
-XDG_MENU_PREFIX=arch- kbuildsycoca6					#dolphin mime fix
-
-###### COMPOSITOR
-picom & 
-
-###### THEME
-wal --theme .cache/wal/colors.json 
+####### THEME
+	picom &																							#Compositor
+	wal\																								#PYWAL
+		-o ~/.config/wal/finalize.sh\												#Script to run after wal
+		-e\																									#prevent polybar update
+		--theme .cache/wal/colors.json\											#Color Scheme
+		-q &
+fi
