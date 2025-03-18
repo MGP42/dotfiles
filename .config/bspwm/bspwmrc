@@ -4,7 +4,6 @@ xsetroot -cursor_name left_ptr							#Mouse
 
 ####### BSPCWM implementation
 bash ~/.config/bspwm/scripts/monitor.sh
-wal --theme .cache/wal/colors.json 
 
 bspc config pointer_follows_monitor		true;
 
@@ -46,3 +45,5 @@ XDG_MENU_PREFIX=arch- kbuildsycoca6					#dolphin mime fix
 ###### COMPOSITOR
 picom & 
 
+###### THEME
+{sleep 1;wal --theme .cache/wal/colors.json} &
