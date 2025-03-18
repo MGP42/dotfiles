@@ -54,7 +54,7 @@ getData
 active=$(bspc query -D -m $MONITOR -d .active --names)		# get active desktop of inactive monitors
 returnData
 
-bspc subscribe desktop | while read -r _; do
+bspc subscribe | while read -r _; do
 		# only update if the monitor is the current monitor
 		if [ $MONITOR == $(bspc query -M -m --names) ]; then
 	    getData
