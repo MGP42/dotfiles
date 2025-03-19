@@ -19,7 +19,9 @@ active_end=" \%\{F$color_active\}\%\{B$color_inactive\}$symbol\%\{F$foreground\}
 # get bspwm data per desktop
 getData() {
 		all=$(bspc query -D -m --names)
-    active=$(bspc query -D -d focused --names)
+		if [ $MONITOR == $(bspc query -M -m --names) ]; then	# only update if the monitor is the current monitor
+			active=$(bspc query -D -d focused --names)
+		fi
 		occupied=$(bspc query -D -m $MONITOR --names -d .occupied )
 		out=""
 }
@@ -55,9 +57,6 @@ active=$(bspc query -D -m $MONITOR -d .active --names)		# get active desktop of 
 returnData
 
 bspc subscribe | while read -r _; do
-		# only update if the monitor is the current monitor
-		if [ $MONITOR == $(bspc query -M -m --names) ]; then
-	    getData
-			returnData
-		fi
+	getData
+	returnData
 done
