@@ -1,0 +1,29 @@
+{
+    "checksum": "b5675523251522a3f84160cab6e95ca3",
+    "wallpaper": "/home/dki/Bilder/Wallpaper/Abstract/wallhaven-odz1gp.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0c040c",
+        "foreground": "#c2c0c2",
+        "cursor": "#c2c0c2"
+    },
+    "colors": {
+        "color0": "#0c040c",
+        "color1": "#473354",
+        "color2": "#7f2530",
+        "color3": "#30347c",
+        "color4": "#424178",
+        "color5": "#84487a",
+        "color6": "#5d6999",
+        "color7": "#958995",
+        "color8": "#675467",
+        "color9": "#5F4571",
+        "color10": "#AA3240",
+        "color11": "#4146A6",
+        "color12": "#5957A0",
+        "color13": "#B061A3",
+        "color14": "#7C8CCC",
+        "color15": "#c2c0c2"
+    }
+}
