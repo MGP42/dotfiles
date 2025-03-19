@@ -2,7 +2,7 @@
 # export BROWSER=/usr/bin/chromium
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export TERMINAL=/usr/bin/alacritty
+export TERMINAL=/usr/bin/kitty
 
 # SSH-AGENT
 eval $(ssh-agent)
