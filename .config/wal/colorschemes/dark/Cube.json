@@ -1,28 +1,29 @@
 {
+    "checksum": "b1a30175e679c9d7acb6a3e70c5d4697",
     "wallpaper": "/home/dki/Bilder/Wallpaper/Technik/Cube.jpg",
     "alpha": "100",
 
     "special": {
         "background": "#070417",
-        "foreground": "#c0cfdf",
-        "cursor": "#c0cfdf"
+        "foreground": "#c1c0c5",
+        "cursor": "#c1c0c5"
     },
     "colors": {
         "color0": "#070417",
-        "color1": "#4B556F",
-        "color2": "#3A528A",
-        "color3": "#708BAF",
-        "color4": "#576C92",
-        "color5": "#B47950",
-        "color6": "#769BC8",
-        "color7": "#c0cfdf",
-        "color8": "#86909c",
+        "color1": "#383f53",
+        "color2": "#875a3c",
+        "color3": "#587496",
+        "color4": "#41516d",
+        "color5": "#546883",
+        "color6": "#2b3d67",
+        "color7": "#8d8c97",
+        "color8": "#5a576b",
         "color9": "#4B556F",
         "color10": "#B47950",
-        "color11": "#3A528A",
+        "color11": "#769BC8",
         "color12": "#576C92",
         "color13": "#708BAF",
-        "color14": "#769BC8",
-        "color15": "#c0cfdf"
+        "color14": "#3A528A",
+        "color15": "#c1c0c5"
     }
 }

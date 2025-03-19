@@ -1,28 +1,29 @@
 {
+    "checksum": "10b333e645639c73f06504831c328c62",
     "wallpaper": "/home/dki/Bilder/Wallpaper/Abstract/Fractal-Wallpaper-133-2560x1440.jpg",
     "alpha": "100",
 
     "special": {
         "background": "#081929",
-        "foreground": "#9ed8d3",
-        "cursor": "#9ed8d3"
+        "foreground": "#c1c5c9",
+        "cursor": "#c1c5c9"
     },
     "colors": {
         "color0": "#081929",
-        "color1": "#196A75",
-        "color2": "#60A062",
-        "color3": "#4C7B84",
-        "color4": "#1C7A83",
-        "color5": "#286468",
-        "color6": "#239997",
-        "color7": "#9ed8d3",
-        "color8": "#6e9793",
+        "color1": "#124f57",
+        "color2": "#487849",
+        "color3": "#395c63",
+        "color4": "#155b62",
+        "color5": "#1e4b4e",
+        "color6": "#1a7271",
+        "color7": "#91969b",
+        "color8": "#5e6872",
         "color9": "#196A75",
-        "color10": "#286468",
-        "color11": "#60A062",
+        "color10": "#60A062",
+        "color11": "#4C7B84",
         "color12": "#1C7A83",
-        "color13": "#4C7B84",
+        "color13": "#286468",
         "color14": "#239997",
-        "color15": "#9ed8d3"
+        "color15": "#c1c5c9"
     }
 }
