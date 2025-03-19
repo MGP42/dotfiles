@@ -1,4 +1,4 @@
-gateway=$(ip route | grep default | awk '{print $3}')
+gateway=$(ip route | grep -m1 default | awk '{print $3}')
 
 if [ -z $gateway ]; then
 		echo " |"
