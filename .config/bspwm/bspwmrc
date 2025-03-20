@@ -4,6 +4,7 @@ xsetroot -cursor_name left_ptr							#Mouse
 
 ####### BSPCWM implementation
 bash ~/.config/bspwm/scripts/monitor.sh
+bash ~/.config/bspwm/bspwm-colors.sh
 
 bspc config pointer_follows_monitor		true;
 
