@@ -11,7 +11,7 @@ body {{
 	--text-accent-hover	{foreground};
 
 	--background-primary: {background};
-	--background-primary-alt: {background};
+	--background-primary-alt: color-mix(in srgb,{background} 95%,white);
 	--background-secondary: color-mix(in srgb,{background} 80%,black);
 	--background-secondary-alt: color-mix(in srgb,{background} 80%,black);
 	
