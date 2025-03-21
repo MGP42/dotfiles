@@ -30,4 +30,15 @@ body {{
 
 	--ribbon-background: color-mix(in srgb,{background} 50%,black);
 	--titlebar-background-focused: color-mix(in srgb,{background} 50%,black);
+
+	.tree-item.nav-folder:not(.is-collapsed) {{
+    border: 1px solid {color2};
+    border-radius: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+  }}
+  h1 {{
+    border-bottom: 2px solid {color2};
+    padding-bottom: 10px;
+  }}
 }}
