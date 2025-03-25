@@ -1,0 +1,29 @@
+{
+    "checksum": "1918c69ac3a1cc6f4fb90006874c17a3",
+    "wallpaper": "/home/dki/Bilder/Wallpaper/Fluid/wallhaven-1pypp3.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0d0d0f",
+        "foreground": "#c2c2c3",
+        "cursor": "#c2c2c3"
+    },
+    "colors": {
+        "color0": "#0d0d0f",
+        "color1": "#2f3036",
+        "color2": "#a34b12",
+        "color3": "#48484e",
+        "color4": "#762f18",
+        "color5": "#783f1a",
+        "color6": "#36363c",
+        "color7": "#8d8d97",
+        "color8": "#58586b",
+        "color9": "#3F4049",
+        "color10": "#DA6419",
+        "color11": "#616069",
+        "color12": "#9E3F21",
+        "color13": "#A15423",
+        "color14": "#494951",
+        "color15": "#c2c2c3"
+    }
+}
