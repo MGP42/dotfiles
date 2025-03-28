@@ -56,7 +56,7 @@ zsh_color=(
     '{brightwhite}'           #path foreground
     '{red}'             #path background
     '{black}'           #running jobs foreground
-    '{brightwhite}'           #running jobs background
+    '{white}'           #running jobs background
     '{brightwhite}'           #git HEAD not synced foreground
     '{red}'             #git HEAD not synced background
     '{brightwhite}'           #git HEAD synced foreground
