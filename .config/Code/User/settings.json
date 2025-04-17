@@ -1,6 +1,7 @@
 {
   "window.menuBarVisibility": "toggle",
   "editor.inlineSuggest.enabled": true,
+  "editor.wordWrap": "on",
   "[python]": {
     "editor.formatOnType": true
   },
