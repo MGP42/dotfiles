@@ -1,9 +1,3 @@
-button8
-	xdotool key --clearmodifiers alt+Left
-
-button 9
-	xdotool key --clearmodifiers alt+Right
-
 XF86AudioPrev
 	playerctl previous
 
