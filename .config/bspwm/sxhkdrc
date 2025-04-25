@@ -105,9 +105,9 @@ super + {_,shift +} h
 alt + {_,shift + } Tab
 	bspc node -f {next,prev}.local.window
 
-# focus the last node/desktop
+# focus the last monitor/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last; 
+	bspc {monitor,desktop} -f last; 
 
 super + shift + Tab
 	bspc node -d last
