@@ -11,11 +11,6 @@
   "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.autoBuild.run": "onSave",
-  // "latex-workshop.latex.clean.enabled": true,
-  // "latex-workshop.latex.clean.args": [
-  //   "-c",
-  //   "%TEX%"
-  // ],
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*/*.aux",
@@ -150,9 +145,8 @@
   "markdown-pdf.margin.right": "2cm",
   "markdown-pdf.margin.left": "2.5cm",
   "ltex.additionalRules.languageModel": "de-DE",
-  // "[latex]":{
-  //   "editor.quickSuggestions": {
-  //     "other": false,
-  //   },
-  // },
+  // TMP fix for wal making cursor unfindable
+  "workbench.colorCustomizations": { 
+    "editorCursor.foreground": "#aaaaaa"
+  }
 }
