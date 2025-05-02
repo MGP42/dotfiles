@@ -125,6 +125,9 @@ super + alt + {1-9,0}
 super + {_,shift + }{F1,F2,F3,F4,F5}
 	bspc {desktop -f, node -d} ^{1,2,3,4,5}:focused;
 
+# send and follow to the given monitor
+super + alt + {F1,F2,F3,F4,F5}
+	bspc node -d ^{1,2,3,4,5}:focused --follow;
 
 #
 # preselect
