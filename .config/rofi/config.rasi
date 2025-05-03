@@ -17,6 +17,10 @@ configuration {
 	
 	kb-mode-next:				"Control+Tab,Super+Tab";
 	kb-mode-previous:			"Control+ISO_Left_Tab,Super+ISO_Left_Tab";
+	kb-row-first: "";
+	kb-row-last: "";
+	kb-move-front: "Home";
+	kb-move-end: "End";
 }
 
 /* ---- Window ---- */
