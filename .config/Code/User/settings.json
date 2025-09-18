@@ -148,5 +148,7 @@
   // TMP fix for wal making cursor unfindable
   "workbench.colorCustomizations": { 
     "editorCursor.foreground": "#aaaaaa"
-  }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "python.defaultInterpreterPath": "/bin/python"
 }
