@@ -30,6 +30,7 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 
 if [[ "$1" == 0 ]]; then			#Only run on first start
 ####### SYSTEM CONFIGURATION
 	bash ~/.config/bspwm/scripts/polybar_launch.sh 			#Info Bar
+	caffeine &																					#Prevent Standby when fullscreen
 	xss-lock ~/.config/bspwm/scripts/lock.sh &					#Lockscreen after Standby
 
 ####### SYSTEM APPLICATIONS
