@@ -4,4 +4,4 @@ for x in $(bspc query -N); do
 		bspc node $x -d $(bspc query -D -d)
 	fi
 done
-telegram-desktop
+Telegram
