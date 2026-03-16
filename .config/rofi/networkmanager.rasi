@@ -8,7 +8,7 @@ configuration {
 
 /* ---- Window ---- */
 window {
-    width:						380px;
+    width:						500px;
 	height:						calc(100% - 17px);
     x-offset:                   0px;
     y-offset:                   17px;
